@@ -1,0 +1,22 @@
+# Robots.txt para WayService Engenharia
+# Última atualização: 18/12/2025
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://wayserviceltda.com/sitemap.xml
+
+# Crawl-delay (opcional - evita sobrecarga do servidor)
+Crawl-delay: 1
+
+# Bloquear arquivos desnecessários para indexação
+Disallow: /img/
+Disallow: /*.py$
+Disallow: /*.txt$
+Disallow: /logo/
+
+# Permitir crawling de CSS e JS (importante para renderização do Google)
+Allow: /styles.css
+Allow: /script.js
+Allow: /projetos.js

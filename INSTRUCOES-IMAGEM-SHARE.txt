@@ -1,0 +1,67 @@
+═══════════════════════════════════════════════════════════════════
+📸 INSTRUÇÕES PARA CRIAR A IMAGEM DE COMPARTILHAMENTO
+═══════════════════════════════════════════════════════════════════
+
+ARQUIVO: img/share-image.jpg
+
+ESPECIFICAÇÕES TÉCNICAS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• Dimensões: 1200px × 630px (padrão Open Graph)
+• Formato: JPEG
+• Qualidade: 80-90%
+• Tamanho máximo: 1 MB
+• Proporção: 1.91:1
+
+DESIGN SUGERIDO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Background:
+   - Gradiente: #1E1F27 → #0F1014 (mesmo do site)
+   - Adicionar elementos visuais leves (construção, engrenagens)
+
+2. Logo:
+   - Logo WayService (Ativo 2.png) no topo ou canto superior esquerdo
+   - Tamanho: ~150-200px de largura
+
+3. Texto Principal:
+   - Título: "WayService"
+   - Subtítulo: "Engenharia e Construção"
+   - Fonte: Inter (Bold/ExtraBold)
+   - Cor: #43E456 (verde destaque)
+
+4. Informações Secundárias:
+   - "Obras Turnkey • Reformas • Manutenção"
+   - "SP | MS | PR"
+   - Fonte: Inter (Medium)
+   - Cor: #FFFFFF (80% opacidade)
+
+5. Elementos Visuais:
+   - Foto de uma obra executada (escolher a melhor do portfólio)
+   - Aplicar overlay escuro para manter texto legível
+   - Ícones das NRs (NR-10, NR-18, NR-24, NR-35)
+
+FERRAMENTAS RECOMENDADAS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• Canva (template "LinkedIn Post" ou "Facebook Cover")
+• Photoshop
+• Figma
+• Adobe Express
+• Crello/VistaCreate
+
+ONDE APARECERÁ:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ WhatsApp (preview de links)
+✓ LinkedIn (posts e compartilhamentos)
+✓ Facebook (compartilhamentos)
+✓ Twitter/X (cards)
+✓ Telegram (preview de links)
+
+DICA PROFISSIONAL:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Após criar, testar a imagem em:
+• https://www.opengraph.xyz/
+• Facebook Sharing Debugger
+• LinkedIn Post Inspector
+
+═══════════════════════════════════════════════════════════════════
+✅ Depois de criar, salvar em: img/share-image.jpg
+═══════════════════════════════════════════════════════════════════

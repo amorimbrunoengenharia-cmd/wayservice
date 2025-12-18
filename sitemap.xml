@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- Página Principal -->
+    <url>
+        <loc>https://wayserviceltda.com/</loc>
+        <lastmod>2025-12-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Página de Projetos -->
+    <url>
+        <loc>https://wayserviceltda.com/projetos.html</loc>
+        <lastmod>2025-12-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Projetos Individuais - UFV -->
+    <url>
+        <loc>https://wayserviceltda.com/projeto-ufv-sao-mateus.html</loc>
+        <lastmod>2025-12-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://wayserviceltda.com/projeto-ufv-pedro-canario.html</loc>
+        <lastmod>2025-12-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://wayserviceltda.com/projeto-ufv-santa-adelia.html</loc>
+        <lastmod>2025-12-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Projetos Industriais -->
+    <url>
+        <loc>https://wayserviceltda.com/projeto-monsanto-bayer-itai.html</loc>
+        <lastmod>2025-12-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://wayserviceltda.com/projeto-petrobras-refinaria.html</loc>
+        <lastmod>2025-12-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://wayserviceltda.com/projeto-transpetro-aracaju.html</loc>
+        <lastmod>2025-12-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Projetos Comerciais -->
+    <url>
+        <loc>https://wayserviceltda.com/projeto-lojas-americanas.html</loc>
+        <lastmod>2025-12-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Projetos Públicos - Fóruns -->
+    <url>
+        <loc>https://wayserviceltda.com/projeto-forum-auriflama.html</loc>
+        <lastmod>2025-12-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://wayserviceltda.com/projeto-forum-andradina.html</loc>
+        <lastmod>2025-12-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://wayserviceltda.com/projeto-forum-aracatuba.html</loc>
+        <lastmod>2025-12-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://wayserviceltda.com/projeto-forum-jales.html</loc>
+        <lastmod>2025-12-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://wayserviceltda.com/projeto-forum-lins.html</loc>
+        <lastmod>2025-12-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Projetos Públicos - Escolas -->
+    <url>
+        <loc>https://wayserviceltda.com/projeto-escola-itapolis.html</loc>
+        <lastmod>2025-12-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://wayserviceltda.com/projeto-escola-barra-bonita.html</loc>
+        <lastmod>2025-12-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+</urlset>

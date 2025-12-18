@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Solicite um Orçamento - Way Service Engenharia">
+    <meta property="og:title" content="Orçamento - Way Service">
+    <meta property="og:description" content="Receba proposta técnica em até 48h úteis">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%2343E456' width='100' height='100' rx='20'/><path d='M30 70V30h8l12 20 12-20h8v40h-8V45L50 65 38 45v25z' fill='%231E1F27'/></svg>">
+    <title>Orçamento - Way Service</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-link">
+                <div class="logo">
+                    <img src="logo/Ativo 2.png" alt="WayService" style="height: 50px;">
+                </div>
+            </a>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+                        <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    </svg>
+                    <span>Início</span>
+                </a>
+                <a href="projetos.html" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path>
+                        <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path>
+                        <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path>
+                        <path d="M10 6h4"></path>
+                        <path d="M10 10h4"></path>
+                        <path d="M10 14h4"></path>
+                        <path d="M10 18h4"></path>
+                    </svg>
+                    <span>Projetos</span>
+                </a>
+                <a href="index.html#orcamento" class="nav-link active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+                    </svg>
+                    <span>Orçamento</span>
+                </a>
+                <a href="index.html#contato" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    <span>Contato</span>
+                </a>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="4" x2="20" y1="12" y2="12"></line>
+                    <line x1="4" x2="20" y1="6" y2="6"></line>
+                    <line x1="4" x2="20" y1="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5518997421905" target="_blank" class="whatsapp-float" aria-label="Falar no WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+        </svg>
+    </a>
+
+    <!-- Seção Hero -->
+    <section class="hero quote-hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content fade-in reveal" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h1>Sua Indústria ou Repartição Precisa de um <span class="highlight">Parceiro Técnico</span>?</h1>
+                <p class="hero-subtitle">Receba proposta técnica em até 48h úteis</p>
+                <div class="urgency-timer" style="margin-top: 1.5rem; justify-content: center;">
+                    <svg class="timer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <div class="timer-text">
+                        Resposta em: <span class="timer-number timer-hours">48</span>h
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulário de Orçamento -->
+    <section class="section">
+        <div class="container" style="max-width: 900px;">
+            <div class="card glassmorphism reveal" style="padding: 3rem;">
+                <!-- Progress Bar -->
+                <div class="form-progress">
+                    <div class="form-progress-bar" style="width: 33.33%;"></div>
+                </div>
+
+                <!-- Wizard Container -->
+                <div class="wizard-container">
+                    <!-- Steps Indicator -->
+                    <div class="wizard-steps">
+                        <div class="wizard-step active">
+                            <div class="wizard-step-number">1</div>
+                            <div class="wizard-step-label">Seus Dados</div>
+                        </div>
+                        <div class="wizard-step">
+                            <div class="wizard-step-number">2</div>
+                            <div class="wizard-step-label">Detalhes do Projeto</div>
+                        </div>
+                        <div class="wizard-step">
+                            <div class="wizard-step-number">3</div>
+                            <div class="wizard-step-label">Finalizar</div>
+                        </div>
+                    </div>
+
+                    <form id="quoteForm" class="quote-form">
+                        <div class="wizard-content">
+                            <!-- Painel 1: Dados Pessoais -->
+                            <div class="wizard-panel active" data-step="1">
+                                <h3 style="margin-bottom: 2rem; color: var(--primary-green);">Informações de Contato</h3>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="name">Nome completo</label>
+                                        <input type="text" id="name" name="name" required placeholder="Seu nome completo">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="company">Empresa / Órgão</label>
+                                        <input type="text" id="company" name="company" required placeholder="Nome da empresa ou órgão">
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="phone">Telefone / WhatsApp</label>
+                                        <input type="tel" id="phone" name="phone" required placeholder="(00) 0 0000-0000">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">E-mail (opcional)</label>
+                                        <input type="email" id="email" name="email" placeholder="seu@email.com">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Painel 2: Detalhes do Projeto -->
+                            <div class="wizard-panel" data-step="2">
+                                <h3 style="margin-bottom: 2rem; color: var(--primary-green);">Informações do Projeto</h3>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="workType">Tipo de Obra</label>
+                                        <select id="workType" name="workType" required>
+                                            <option value="">Selecione o tipo de obra</option>
+                                            <option value="Comercial">Comercial</option>
+                                            <option value="Industrial">Industrial</option>
+                                            <option value="Infraestrutura">Infraestrutura</option>
+                                            <option value="Obras Públicas">Obras Públicas</option>
+                                            <option value="Varejo">Varejo</option>
+                                            <option value="Manutenção">Manutenção</option>
+                                            <option value="Outro">Outro</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="deadline">Prazo Desejado</label>
+                                        <select id="deadline" name="deadline" required>
+                                            <option value="">Selecione o prazo</option>
+                                            <option value="Urgente (até 30 dias)">Urgente (até 30 dias)</option>
+                                            <option value="1-3 meses">1-3 meses</option>
+                                            <option value="3-6 meses">3-6 meses</option>
+                                            <option value="Mais de 6 meses">Mais de 6 meses</option>
+                                            <option value="A definir">A definir</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="location">Cidade / Estado</label>
+                                        <input type="text" id="location" name="location" required placeholder="Ex: Londrina/PR">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="area">Área Estimada (m²) - Opcional</label>
+                                        <input type="text" id="area" name="area" placeholder="Ex: 1000 m²">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Painel 3: Detalhes e Anexos -->
+                            <div class="wizard-panel" data-step="3">
+                                <h3 style="margin-bottom: 2rem; color: var(--primary-green);">Detalhes e Anexos</h3>
+                                <div class="form-group">
+                                    <label for="message">Descreva sua necessidade</label>
+                                    <textarea id="message" name="message" required rows="6" placeholder="Descreva sua necessidade em detalhes (tipo de obra, prazo, requisitos especiais, etc.)..."></textarea>
+                                </div>
+
+                                <div class="file-upload-area" style="margin-top: 2rem;">
+                                    <svg class="file-upload-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="17 8 12 3 7 8"></polyline>
+                                        <line x1="12" x2="12" y1="3" y2="15"></line>
+                                    </svg>
+                                    <div class="file-upload-text">Arraste arquivos ou clique para fazer upload</div>
+                                    <div class="file-upload-hint">Fotos, plantas ou documentos (máx. 5MB cada)</div>
+                                </div>
+                                <div class="file-preview"></div>
+                            </div>
+                        </div>
+
+                        <!-- Wizard Actions -->
+                        <div class="wizard-actions">
+                            <button type="button" class="btn-secondary wizard-prev" style="display: none;">Voltar</button>
+                            <button type="button" class="btn-primary wizard-next">Próximo</button>
+                            <button type="submit" class="btn-primary btn-large" style="display: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                Falar com Engenheiro Agora
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div id="notification" class="notification" style="display: none; margin-top: 2rem;"></div>
+            </div>
+
+            <!-- Informações de Contato -->
+            <div class="contact-info-grid reveal">
+                <div class="contact-info-card card glassmorphism card-shine">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </div>
+                    <h3>Telefone</h3>
+                    <p>(18) 9 9742-1905</p>
+                    <div class="status-indicator" style="margin-top: 0.5rem;">
+                        <span class="status-dot"></span>
+                        <span>Online agora</span>
+                    </div>
+                    <a href="tel:+5518997421905" class="btn-secondary" style="margin-top: 1rem; width: 100%;">Ligar Agora</a>
+                </div>
+
+                <div class="contact-info-card card glassmorphism card-shine">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                        </svg>
+                    </div>
+                    <h3>E-mail</h3>
+                    <p>comercial@wayservice.com</p>
+                    <div class="status-indicator" style="margin-top: 0.5rem; color: var(--text-secondary);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span>Resposta em 24h</span>
+                    </div>
+                    <a href="mailto:comercial@wayservice.com" class="btn-secondary" style="margin-top: 1rem; width: 100%;">Enviar E-mail</a>
+                </div>
+
+                <div class="contact-info-card card glassmorphism card-shine">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3>Localização</h3>
+                    <p>Londrina/PR</p>
+                    <div class="status-indicator" style="margin-top: 0.5rem; color: var(--text-secondary);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span>Seg-Sex: 8h-18h</span>
+                    </div>
+                    <a href="index.html#contato" class="btn-secondary" style="margin-top: 1rem; width: 100%;">Ver Mapa</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="logo/Ativo 3@4x.png" alt="WS" style="height: 40px; margin-bottom: 10px;">
+                        <h3>Way Service</h3>
+                    </div>
+                    <p>Engenharia de Continuidade Operacional para empresas que não podem parar.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <div class="footer-contact">
+                        <p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            (18) 9 9742-1905
+                        </p>
+                        <p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                            </svg>
+                            comercial@wayservice.com
+                        </p>
+                        <p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Rua Goiás, 477 - Centro, Londrina/PR
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Certificações</h4>
+                    <div class="footer-certifications">
+                        <p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                            </svg>
+                            NR-10 | NR-18 | NR-24 | NR-35
+                        </p>
+                        <p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                            </svg>
+                            Segurança Nível Petroquímico
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Way Service Engenharia. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

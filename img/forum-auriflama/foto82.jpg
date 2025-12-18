@@ -1,0 +1,11 @@
+# Adicione as fotos deste projeto aqui
+
+Estrutura esperada:
+- capa.jpg (imagem de capa do card)
+- foto1.jpg
+- foto2.jpg
+- foto3.jpg
+- foto4.jpg
+- ... (quantas fotos forem necessárias)
+
+As fotos aparecerão na galeria na ordem em que estão listadas no projetos.json.
