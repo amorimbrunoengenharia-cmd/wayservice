@@ -410,11 +410,13 @@ function showError() {
  * Filtra projetos por categoria
  */
 function filterProjects(category) {
-    if (category === 'todos') {
+    if (category === 'all' || category === 'todos') {
         renderProjects(allProjects);
+        updateProjectCount(allProjects.length);
     } else {
         const filtered = allProjects.filter(p => p.categoria === category);
         renderProjects(filtered);
+        updateProjectCount(filtered.length);
     }
 }
 
