@@ -163,7 +163,7 @@ Valor: [seu valor DKIM do Google]
 1. Acesse seu domínio em um navegador
 2. Teste em diferentes dispositivos (desktop, tablet, mobile)
 3. Verifique todos os links e seções
-4. Teste o formulário de contato
+4. Teste o formulário de contato (veja seção 5.3 para configuração)
 
 ### 4.3. Configurar SSL/HTTPS
 
@@ -194,10 +194,25 @@ No arquivo `index.html`, atualize:
 
 ### 5.3. Configurar Formulário de Contato
 
-O Squarespace oferece integração de formulários:
-1. No editor, adicione um **Form Block**
-2. Configure os campos conforme o HTML atual
-3. Configure notificações por email
+O Squarespace oferece integração de formulários. Você tem duas opções:
+
+**Opção A: Usar Form Block do Squarespace (Recomendado)**
+1. No editor Squarespace, adicione um **Form Block** na seção de contato
+2. Configure os campos:
+   - Nome (Text field)
+   - Email (Email field)
+   - Telefone (Phone field)
+   - Mensagem (Text area)
+3. Configure notificações por email em **Settings > Email**
+4. O Squarespace processará os envios automaticamente
+
+**Opção B: Configurar Form Action Personalizada**
+1. Se usar o HTML diretamente, adicione o atributo `action` no formulário
+2. Exemplo: `<form action="https://formspree.io/f/seu-id" method="POST">`
+3. Ou use serviços como Formspree, FormSubmit, ou Web3Forms
+4. Configure o endpoint de acordo com o serviço escolhido
+
+**Nota**: O formulário atual no HTML não tem `action` configurado. Você deve escolher uma das opções acima para que ele funcione.
 
 ## Parte 6: SEO e Analytics
 
@@ -280,4 +295,4 @@ Para suporte técnico:
 
 ---
 
-**Data da última atualização**: Dezembro 2024
+**Data da última atualização**: Dezembro 2025

@@ -54,7 +54,7 @@ Antes de publicar, atualize no arquivo `index.html`:
 - [ ] **Telefone**: Linha 108 - `(00) 0000-0000`
 - [ ] **Email**: Linha 109 - `contato@wayservice.com.br`
 - [ ] **Endereço**: Linha 110 - `Seu endereço aqui`
-- [ ] **Ano no rodapé**: Linha 134 - `2024`
+- [x] **Ano no rodapé**: Linha 136 - `2025` (atualizado)
 
 ## ⚠️ Importante: Manter o Email Funcionando
 

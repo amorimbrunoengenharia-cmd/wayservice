@@ -66,6 +66,7 @@
 - [ ] Email: linha 109 - confirmar `contato@wayservice.com.br`
 - [ ] Endereço: linha 110 - adicionar endereço real
 - [ ] Horário: linha 111 - confirmar horário de atendimento
+- [x] Ano no footer: atualizado para 2025
 
 ### Conteúdo Opcional
 - [ ] Adicionar logo da empresa (requer modificação HTML)
@@ -126,4 +127,4 @@
 ---
 
 **Status**: ✅ Pronto para deploy
-**Última atualização**: Dezembro 2024
+**Última atualização**: Dezembro 2025
