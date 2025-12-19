@@ -13,6 +13,7 @@
             left: 0;
             right: 0;
             background: rgba(30, 31, 39, 0.95);
+            -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(67, 228, 86, 0.2);
             padding: 1rem 2rem;
@@ -207,6 +208,7 @@
         .lightbox-info {
             width: 400px;
             background: rgba(26, 26, 46, 0.95);
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             padding: 2rem;
             overflow-y: auto;
@@ -317,6 +319,7 @@
             border: 1px solid #333;
             border-radius: 16px;
             padding: 2rem;
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             display: flex;
             align-items: center;
@@ -428,9 +431,11 @@
         </a>
         <div class="header-badge">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <polyline points="16 11 18 13 22 9"></polyline>
             </svg>
-            <span>Responsável: Eng. José Sérgio</span>
+            <span>Gestão de Execução: Eng. José Sérgio</span>
         </div>
     </nav>
 
@@ -474,9 +479,9 @@
                 </svg>
             </div>
             <div class="engineer-info">
-                <div class="engineer-label">Responsável Técnico</div>
+                <div class="engineer-label">Gestão de Execução</div>
                 <div class="engineer-name">Eng. José Sérgio</div>
-                <div class="engineer-role">Engenheiro Responsável (Acervo Técnico)</div>
+                <div class="engineer-role">Engenheiro Responsável</div>
             </div>
         </div>
 
@@ -491,7 +496,7 @@
             <div class="lightbox-image-wrapper">
                 <img id="lightboxImage" class="lightbox-image" src="" alt="">
                 <div class="lightbox-counter">
-                    <span id="currentIndex">1</span> / <span id="totalImages">350</span>
+                    <span id="currentIndex">1</span> / <span id="totalImages">332</span>
                 </div>
             </div>
             <div class="lightbox-info">
@@ -519,21 +524,356 @@
         </div>
     </div>
 
-    <script>
-        const totalImages = 350;
+        <script>
+        const images = [
+            "img/forum-aracatuba/foto1.jpg",
+            "img/forum-aracatuba/foto2.jpg",
+            "img/forum-aracatuba/foto3.jpg",
+            "img/forum-aracatuba/foto4.jpg",
+            "img/forum-aracatuba/foto5.jpg",
+            "img/forum-aracatuba/foto6.jpg",
+            "img/forum-aracatuba/foto7.jpg",
+            "img/forum-aracatuba/foto8.jpg",
+            "img/forum-aracatuba/foto9.jpg",
+            "img/forum-aracatuba/foto10.jpg",
+            "img/forum-aracatuba/foto11.jpg",
+            "img/forum-aracatuba/foto12.jpg",
+            "img/forum-aracatuba/foto13.jpg",
+            "img/forum-aracatuba/foto14.jpg",
+            "img/forum-aracatuba/foto15.jpg",
+            "img/forum-aracatuba/foto16.jpg",
+            "img/forum-aracatuba/foto17.jpg",
+            "img/forum-aracatuba/foto18.jpg",
+            "img/forum-aracatuba/foto19.jpg",
+            "img/forum-aracatuba/foto20.jpg",
+            "img/forum-aracatuba/foto21.jpg",
+            "img/forum-aracatuba/foto22.jpg",
+            "img/forum-aracatuba/foto23.jpg",
+            "img/forum-aracatuba/foto24.jpg",
+            "img/forum-aracatuba/foto25.jpg",
+            "img/forum-aracatuba/foto26.jpg",
+            "img/forum-aracatuba/foto27.jpg",
+            "img/forum-aracatuba/foto28.jpg",
+            "img/forum-aracatuba/foto29.jpg",
+            "img/forum-aracatuba/foto30.jpg",
+            "img/forum-aracatuba/foto31.jpg",
+            "img/forum-aracatuba/foto32.jpg",
+            "img/forum-aracatuba/foto33.jpg",
+            "img/forum-aracatuba/foto34.jpg",
+            "img/forum-aracatuba/foto35.jpg",
+            "img/forum-aracatuba/foto36.jpg",
+            "img/forum-aracatuba/foto37.jpg",
+            "img/forum-aracatuba/foto38.jpg",
+            "img/forum-aracatuba/foto39.jpg",
+            "img/forum-aracatuba/foto40.jpg",
+            "img/forum-aracatuba/foto41.jpg",
+            "img/forum-aracatuba/foto42.jpg",
+            "img/forum-aracatuba/foto43.jpg",
+            "img/forum-aracatuba/foto44.jpg",
+            "img/forum-aracatuba/foto45.jpg",
+            "img/forum-aracatuba/foto46.jpg",
+            "img/forum-aracatuba/foto47.jpg",
+            "img/forum-aracatuba/foto48.jpg",
+            "img/forum-aracatuba/foto49.jpg",
+            "img/forum-aracatuba/foto50.jpg",
+            "img/forum-aracatuba/foto51.jpg",
+            "img/forum-aracatuba/foto52.jpg",
+            "img/forum-aracatuba/foto53.jpg",
+            "img/forum-aracatuba/foto54.jpg",
+            "img/forum-aracatuba/foto55.jpg",
+            "img/forum-aracatuba/foto56.jpg",
+            "img/forum-aracatuba/foto57.jpg",
+            "img/forum-aracatuba/foto58.jpg",
+            "img/forum-aracatuba/foto59.jpg",
+            "img/forum-aracatuba/foto60.jpg",
+            "img/forum-aracatuba/foto61.jpg",
+            "img/forum-aracatuba/foto62.jpg",
+            "img/forum-aracatuba/foto63.jpg",
+            "img/forum-aracatuba/foto64.jpg",
+            "img/forum-aracatuba/foto65.jpg",
+            "img/forum-aracatuba/foto66.jpg",
+            "img/forum-aracatuba/foto67.jpg",
+            "img/forum-aracatuba/foto68.jpg",
+            "img/forum-aracatuba/foto69.jpg",
+            "img/forum-aracatuba/foto70.jpg",
+            "img/forum-aracatuba/foto71.jpg",
+            "img/forum-aracatuba/foto72.jpg",
+            "img/forum-aracatuba/foto73.jpg",
+            "img/forum-aracatuba/foto74.jpg",
+            "img/forum-aracatuba/foto75.jpg",
+            "img/forum-aracatuba/foto77.jpg",
+            "img/forum-aracatuba/foto78.jpg",
+            "img/forum-aracatuba/foto79.jpg",
+            "img/forum-aracatuba/foto80.jpg",
+            "img/forum-aracatuba/foto81.jpg",
+            "img/forum-aracatuba/foto82.jpg",
+            "img/forum-aracatuba/foto83.jpg",
+            "img/forum-aracatuba/foto84.jpg",
+            "img/forum-aracatuba/foto85.jpg",
+            "img/forum-aracatuba/foto86.jpg",
+            "img/forum-aracatuba/foto87.jpg",
+            "img/forum-aracatuba/foto88.jpg",
+            "img/forum-aracatuba/foto89.jpg",
+            "img/forum-aracatuba/foto90.jpg",
+            "img/forum-aracatuba/foto91.jpg",
+            "img/forum-aracatuba/foto92.jpg",
+            "img/forum-aracatuba/foto93.jpg",
+            "img/forum-aracatuba/foto94.jpg",
+            "img/forum-aracatuba/foto95.jpg",
+            "img/forum-aracatuba/foto96.jpg",
+            "img/forum-aracatuba/foto97.jpg",
+            "img/forum-aracatuba/foto98.jpg",
+            "img/forum-aracatuba/foto99.jpg",
+            "img/forum-aracatuba/foto100.jpg",
+            "img/forum-aracatuba/foto101.jpg",
+            "img/forum-aracatuba/foto102.jpg",
+            "img/forum-aracatuba/foto103.jpg",
+            "img/forum-aracatuba/foto104.jpg",
+            "img/forum-aracatuba/foto105.jpg",
+            "img/forum-aracatuba/foto106.jpg",
+            "img/forum-aracatuba/foto107.jpg",
+            "img/forum-aracatuba/foto108.jpg",
+            "img/forum-aracatuba/foto109.jpg",
+            "img/forum-aracatuba/foto110.jpg",
+            "img/forum-aracatuba/foto111.jpg",
+            "img/forum-aracatuba/foto112.jpg",
+            "img/forum-aracatuba/foto113.jpg",
+            "img/forum-aracatuba/foto114.jpg",
+            "img/forum-aracatuba/foto115.jpg",
+            "img/forum-aracatuba/foto116.jpg",
+            "img/forum-aracatuba/foto117.jpg",
+            "img/forum-aracatuba/foto118.jpg",
+            "img/forum-aracatuba/foto119.jpg",
+            "img/forum-aracatuba/foto120.jpg",
+            "img/forum-aracatuba/foto121.jpg",
+            "img/forum-aracatuba/foto122.jpg",
+            "img/forum-aracatuba/foto123.jpg",
+            "img/forum-aracatuba/foto124.jpg",
+            "img/forum-aracatuba/foto125.jpg",
+            "img/forum-aracatuba/foto126.jpg",
+            "img/forum-aracatuba/foto127.jpg",
+            "img/forum-aracatuba/foto128.jpg",
+            "img/forum-aracatuba/foto129.jpg",
+            "img/forum-aracatuba/foto130.jpg",
+            "img/forum-aracatuba/foto131.jpg",
+            "img/forum-aracatuba/foto132.jpg",
+            "img/forum-aracatuba/foto133.jpg",
+            "img/forum-aracatuba/foto134.jpg",
+            "img/forum-aracatuba/foto135.jpg",
+            "img/forum-aracatuba/foto136.jpg",
+            "img/forum-aracatuba/foto138.jpg",
+            "img/forum-aracatuba/foto139.jpg",
+            "img/forum-aracatuba/foto140.jpg",
+            "img/forum-aracatuba/foto141.jpg",
+            "img/forum-aracatuba/foto142.jpg",
+            "img/forum-aracatuba/foto144.jpg",
+            "img/forum-aracatuba/foto145.jpg",
+            "img/forum-aracatuba/foto146.jpg",
+            "img/forum-aracatuba/foto147.jpg",
+            "img/forum-aracatuba/foto148.jpg",
+            "img/forum-aracatuba/foto149.jpg",
+            "img/forum-aracatuba/foto151.jpg",
+            "img/forum-aracatuba/foto152.jpg",
+            "img/forum-aracatuba/foto153.jpg",
+            "img/forum-aracatuba/foto154.jpg",
+            "img/forum-aracatuba/foto155.jpg",
+            "img/forum-aracatuba/foto156.jpg",
+            "img/forum-aracatuba/foto158.jpg",
+            "img/forum-aracatuba/foto160.jpg",
+            "img/forum-aracatuba/foto161.jpg",
+            "img/forum-aracatuba/foto162.jpg",
+            "img/forum-aracatuba/foto163.jpg",
+            "img/forum-aracatuba/foto164.jpg",
+            "img/forum-aracatuba/foto165.jpg",
+            "img/forum-aracatuba/foto166.jpg",
+            "img/forum-aracatuba/foto167.jpg",
+            "img/forum-aracatuba/foto168.jpg",
+            "img/forum-aracatuba/foto169.jpg",
+            "img/forum-aracatuba/foto170.jpg",
+            "img/forum-aracatuba/foto171.jpg",
+            "img/forum-aracatuba/foto172.jpg",
+            "img/forum-aracatuba/foto173.jpg",
+            "img/forum-aracatuba/foto174.jpg",
+            "img/forum-aracatuba/foto175.jpg",
+            "img/forum-aracatuba/foto176.jpg",
+            "img/forum-aracatuba/foto177.jpg",
+            "img/forum-aracatuba/foto178.jpg",
+            "img/forum-aracatuba/foto179.jpg",
+            "img/forum-aracatuba/foto180.jpg",
+            "img/forum-aracatuba/foto181.jpg",
+            "img/forum-aracatuba/foto182.jpg",
+            "img/forum-aracatuba/foto183.jpg",
+            "img/forum-aracatuba/foto184.jpg",
+            "img/forum-aracatuba/foto185.jpg",
+            "img/forum-aracatuba/foto186.jpg",
+            "img/forum-aracatuba/foto187.jpg",
+            "img/forum-aracatuba/foto188.jpg",
+            "img/forum-aracatuba/foto189.jpg",
+            "img/forum-aracatuba/foto190.jpg",
+            "img/forum-aracatuba/foto191.jpg",
+            "img/forum-aracatuba/foto192.jpg",
+            "img/forum-aracatuba/foto193.jpg",
+            "img/forum-aracatuba/foto194.jpg",
+            "img/forum-aracatuba/foto195.jpg",
+            "img/forum-aracatuba/foto196.jpg",
+            "img/forum-aracatuba/foto197.jpg",
+            "img/forum-aracatuba/foto198.jpg",
+            "img/forum-aracatuba/foto200.jpg",
+            "img/forum-aracatuba/foto201.jpg",
+            "img/forum-aracatuba/foto202.jpg",
+            "img/forum-aracatuba/foto203.jpg",
+            "img/forum-aracatuba/foto204.jpg",
+            "img/forum-aracatuba/foto205.jpg",
+            "img/forum-aracatuba/foto206.jpg",
+            "img/forum-aracatuba/foto207.jpg",
+            "img/forum-aracatuba/foto208.jpg",
+            "img/forum-aracatuba/foto209.jpg",
+            "img/forum-aracatuba/foto210.jpg",
+            "img/forum-aracatuba/foto211.jpg",
+            "img/forum-aracatuba/foto212.jpg",
+            "img/forum-aracatuba/foto213.jpg",
+            "img/forum-aracatuba/foto214.jpg",
+            "img/forum-aracatuba/foto215.jpg",
+            "img/forum-aracatuba/foto216.jpg",
+            "img/forum-aracatuba/foto217.jpg",
+            "img/forum-aracatuba/foto218.jpg",
+            "img/forum-aracatuba/foto220.jpg",
+            "img/forum-aracatuba/foto221.jpg",
+            "img/forum-aracatuba/foto223.jpg",
+            "img/forum-aracatuba/foto224.jpg",
+            "img/forum-aracatuba/foto225.jpg",
+            "img/forum-aracatuba/foto226.jpg",
+            "img/forum-aracatuba/foto227.jpg",
+            "img/forum-aracatuba/foto228.jpg",
+            "img/forum-aracatuba/foto229.jpg",
+            "img/forum-aracatuba/foto230.jpg",
+            "img/forum-aracatuba/foto231.jpg",
+            "img/forum-aracatuba/foto233.jpg",
+            "img/forum-aracatuba/foto234.jpg",
+            "img/forum-aracatuba/foto235.jpg",
+            "img/forum-aracatuba/foto236.jpg",
+            "img/forum-aracatuba/foto237.jpg",
+            "img/forum-aracatuba/foto238.jpg",
+            "img/forum-aracatuba/foto239.jpg",
+            "img/forum-aracatuba/foto240.jpg",
+            "img/forum-aracatuba/foto241.jpg",
+            "img/forum-aracatuba/foto242.jpg",
+            "img/forum-aracatuba/foto243.jpg",
+            "img/forum-aracatuba/foto244.jpg",
+            "img/forum-aracatuba/foto245.jpg",
+            "img/forum-aracatuba/foto246.jpg",
+            "img/forum-aracatuba/foto247.jpg",
+            "img/forum-aracatuba/foto248.jpg",
+            "img/forum-aracatuba/foto249.jpg",
+            "img/forum-aracatuba/foto250.jpg",
+            "img/forum-aracatuba/foto251.jpg",
+            "img/forum-aracatuba/foto252.jpg",
+            "img/forum-aracatuba/foto253.jpg",
+            "img/forum-aracatuba/foto254.jpg",
+            "img/forum-aracatuba/foto255.jpg",
+            "img/forum-aracatuba/foto256.jpg",
+            "img/forum-aracatuba/foto257.jpg",
+            "img/forum-aracatuba/foto258.jpg",
+            "img/forum-aracatuba/foto259.jpg",
+            "img/forum-aracatuba/foto260.jpg",
+            "img/forum-aracatuba/foto261.jpg",
+            "img/forum-aracatuba/foto262.jpg",
+            "img/forum-aracatuba/foto263.jpg",
+            "img/forum-aracatuba/foto265.jpg",
+            "img/forum-aracatuba/foto266.jpg",
+            "img/forum-aracatuba/foto267.jpg",
+            "img/forum-aracatuba/foto268.jpg",
+            "img/forum-aracatuba/foto269.jpg",
+            "img/forum-aracatuba/foto270.jpg",
+            "img/forum-aracatuba/foto271.jpg",
+            "img/forum-aracatuba/foto272.jpg",
+            "img/forum-aracatuba/foto273.jpg",
+            "img/forum-aracatuba/foto274.jpg",
+            "img/forum-aracatuba/foto275.jpg",
+            "img/forum-aracatuba/foto276.jpg",
+            "img/forum-aracatuba/foto277.jpg",
+            "img/forum-aracatuba/foto278.jpg",
+            "img/forum-aracatuba/foto279.jpg",
+            "img/forum-aracatuba/foto280.jpg",
+            "img/forum-aracatuba/foto281.jpg",
+            "img/forum-aracatuba/foto282.jpg",
+            "img/forum-aracatuba/foto283.jpg",
+            "img/forum-aracatuba/foto284.jpg",
+            "img/forum-aracatuba/foto285.jpg",
+            "img/forum-aracatuba/foto287.jpg",
+            "img/forum-aracatuba/foto288.jpg",
+            "img/forum-aracatuba/foto289.jpg",
+            "img/forum-aracatuba/foto290.jpg",
+            "img/forum-aracatuba/foto291.jpg",
+            "img/forum-aracatuba/foto292.jpg",
+            "img/forum-aracatuba/foto293.jpg",
+            "img/forum-aracatuba/foto294.jpg",
+            "img/forum-aracatuba/foto295.jpg",
+            "img/forum-aracatuba/foto296.jpg",
+            "img/forum-aracatuba/foto297.jpg",
+            "img/forum-aracatuba/foto298.jpg",
+            "img/forum-aracatuba/foto299.jpg",
+            "img/forum-aracatuba/foto300.jpg",
+            "img/forum-aracatuba/foto301.jpg",
+            "img/forum-aracatuba/foto302.jpg",
+            "img/forum-aracatuba/foto303.jpg",
+            "img/forum-aracatuba/foto304.jpg",
+            "img/forum-aracatuba/foto306.jpg",
+            "img/forum-aracatuba/foto307.jpg",
+            "img/forum-aracatuba/foto308.jpg",
+            "img/forum-aracatuba/foto309.jpg",
+            "img/forum-aracatuba/foto310.jpg",
+            "img/forum-aracatuba/foto311.jpg",
+            "img/forum-aracatuba/foto312.jpg",
+            "img/forum-aracatuba/foto313.jpg",
+            "img/forum-aracatuba/foto314.jpg",
+            "img/forum-aracatuba/foto315.jpg",
+            "img/forum-aracatuba/foto316.jpg",
+            "img/forum-aracatuba/foto317.jpg",
+            "img/forum-aracatuba/foto318.jpg",
+            "img/forum-aracatuba/foto319.jpg",
+            "img/forum-aracatuba/foto320.jpg",
+            "img/forum-aracatuba/foto323.jpg",
+            "img/forum-aracatuba/foto324.jpg",
+            "img/forum-aracatuba/foto325.jpg",
+            "img/forum-aracatuba/foto328.jpg",
+            "img/forum-aracatuba/foto329.jpg",
+            "img/forum-aracatuba/foto330.jpg",
+            "img/forum-aracatuba/foto331.jpg",
+            "img/forum-aracatuba/foto332.jpg",
+            "img/forum-aracatuba/foto334.jpg",
+            "img/forum-aracatuba/foto335.jpg",
+            "img/forum-aracatuba/foto336.jpg",
+            "img/forum-aracatuba/foto337.jpg",
+            "img/forum-aracatuba/foto338.jpg",
+            "img/forum-aracatuba/foto339.jpg",
+            "img/forum-aracatuba/foto340.jpg",
+            "img/forum-aracatuba/foto341.jpg",
+            "img/forum-aracatuba/foto342.jpg",
+            "img/forum-aracatuba/foto343.jpg",
+            "img/forum-aracatuba/foto344.jpg",
+            "img/forum-aracatuba/foto345.jpg",
+            "img/forum-aracatuba/foto346.jpg",
+            "img/forum-aracatuba/foto347.jpg",
+            "img/forum-aracatuba/foto348.jpg",
+            "img/forum-aracatuba/foto349.jpg",
+            "img/forum-aracatuba/foto350.jpg"
+        ];
+        
+        const totalImages = images.length;
         const projectId = 'forum-aracatuba';
         let currentImageIndex = 0;
 
         const galleryGrid = document.getElementById('galleryGrid');
-        for (let i = 1; i <= totalImages; i++) {
+        images.forEach((imagePath, index) => {
             const item = document.createElement('div');
             item.className = 'gallery-item';
             item.innerHTML = `
-                <img src="img/${projectId}/foto${i}.jpg" alt="Foto ${i}" loading="lazy">
+                <img src="${imagePath}" alt="Foto ${index + 1}" loading="lazy" onerror="this.parentElement.style.display='none'">
             `;
-            item.onclick = () => openLightbox(i - 1);
+            item.onclick = () => openLightbox(index);
             galleryGrid.appendChild(item);
-        }
+        });
 
         function openLightbox(index) {
             currentImageIndex = index;
@@ -554,7 +894,7 @@
 
         function updateLightboxImage() {
             const img = document.getElementById('lightboxImage');
-            img.src = `img/${projectId}/foto${currentImageIndex + 1}.jpg`;
+            img.src = images[currentImageIndex];
             document.getElementById('currentIndex').textContent = currentImageIndex + 1;
         }
 

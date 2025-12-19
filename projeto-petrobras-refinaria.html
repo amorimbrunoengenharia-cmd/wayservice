@@ -486,7 +486,7 @@
             <div class="lightbox-image-wrapper">
                 <img id="lightboxImage" class="lightbox-image" src="" alt="">
                 <div class="lightbox-counter">
-                    <span id="currentIndex">1</span> / <span id="totalImages">123</span>
+                    <span id="currentIndex">1</span> / <span id="totalImages">106</span>
                 </div>
             </div>
             <div class="lightbox-info">
@@ -514,21 +514,130 @@
         </div>
     </div>
 
-    <script>
-        const totalImages = 123;
+        <script>
+        const images = [
+            "img/petrobras-refinaria/foto1.jpg",
+            "img/petrobras-refinaria/foto2.jpg",
+            "img/petrobras-refinaria/foto3.jpg",
+            "img/petrobras-refinaria/foto4.jpg",
+            "img/petrobras-refinaria/foto5.jpg",
+            "img/petrobras-refinaria/foto6.jpg",
+            "img/petrobras-refinaria/foto7.jpg",
+            "img/petrobras-refinaria/foto8.jpg",
+            "img/petrobras-refinaria/foto9.jpg",
+            "img/petrobras-refinaria/foto10.jpg",
+            "img/petrobras-refinaria/foto11.jpg",
+            "img/petrobras-refinaria/foto12.jpg",
+            "img/petrobras-refinaria/foto13.jpg",
+            "img/petrobras-refinaria/foto14.jpg",
+            "img/petrobras-refinaria/foto15.jpg",
+            "img/petrobras-refinaria/foto16.jpg",
+            "img/petrobras-refinaria/foto17.jpg",
+            "img/petrobras-refinaria/foto18.jpg",
+            "img/petrobras-refinaria/foto19.jpg",
+            "img/petrobras-refinaria/foto20.jpg",
+            "img/petrobras-refinaria/foto21.jpg",
+            "img/petrobras-refinaria/foto22.jpg",
+            "img/petrobras-refinaria/foto23.jpg",
+            "img/petrobras-refinaria/foto24.jpg",
+            "img/petrobras-refinaria/foto25.jpg",
+            "img/petrobras-refinaria/foto26.jpg",
+            "img/petrobras-refinaria/foto27.jpg",
+            "img/petrobras-refinaria/foto28.jpg",
+            "img/petrobras-refinaria/foto29.jpg",
+            "img/petrobras-refinaria/foto30.jpg",
+            "img/petrobras-refinaria/foto31.jpg",
+            "img/petrobras-refinaria/foto32.jpg",
+            "img/petrobras-refinaria/foto33.jpg",
+            "img/petrobras-refinaria/foto34.jpg",
+            "img/petrobras-refinaria/foto35.jpg",
+            "img/petrobras-refinaria/foto36.jpg",
+            "img/petrobras-refinaria/foto37.jpg",
+            "img/petrobras-refinaria/foto38.jpg",
+            "img/petrobras-refinaria/foto39.jpg",
+            "img/petrobras-refinaria/foto40.jpg",
+            "img/petrobras-refinaria/foto41.jpg",
+            "img/petrobras-refinaria/foto42.jpg",
+            "img/petrobras-refinaria/foto43.jpg",
+            "img/petrobras-refinaria/foto44.jpg",
+            "img/petrobras-refinaria/foto45.jpg",
+            "img/petrobras-refinaria/foto46.jpg",
+            "img/petrobras-refinaria/foto47.jpg",
+            "img/petrobras-refinaria/foto48.jpg",
+            "img/petrobras-refinaria/foto49.jpg",
+            "img/petrobras-refinaria/foto50.jpg",
+            "img/petrobras-refinaria/foto51.jpg",
+            "img/petrobras-refinaria/foto52.jpg",
+            "img/petrobras-refinaria/foto53.jpg",
+            "img/petrobras-refinaria/foto54.jpg",
+            "img/petrobras-refinaria/foto65.jpg",
+            "img/petrobras-refinaria/foto70.jpg",
+            "img/petrobras-refinaria/foto71.jpg",
+            "img/petrobras-refinaria/foto72.jpg",
+            "img/petrobras-refinaria/foto73.jpg",
+            "img/petrobras-refinaria/foto74.jpg",
+            "img/petrobras-refinaria/foto75.jpg",
+            "img/petrobras-refinaria/foto76.jpg",
+            "img/petrobras-refinaria/foto77.jpg",
+            "img/petrobras-refinaria/foto78.jpg",
+            "img/petrobras-refinaria/foto79.jpg",
+            "img/petrobras-refinaria/foto80.jpg",
+            "img/petrobras-refinaria/foto81.jpg",
+            "img/petrobras-refinaria/foto83.jpg",
+            "img/petrobras-refinaria/foto84.jpg",
+            "img/petrobras-refinaria/foto85.jpg",
+            "img/petrobras-refinaria/foto86.jpg",
+            "img/petrobras-refinaria/foto87.jpg",
+            "img/petrobras-refinaria/foto88.jpg",
+            "img/petrobras-refinaria/foto89.jpg",
+            "img/petrobras-refinaria/foto90.jpg",
+            "img/petrobras-refinaria/foto91.jpg",
+            "img/petrobras-refinaria/foto92.jpg",
+            "img/petrobras-refinaria/foto93.jpg",
+            "img/petrobras-refinaria/foto94.jpg",
+            "img/petrobras-refinaria/foto95.jpg",
+            "img/petrobras-refinaria/foto96.jpg",
+            "img/petrobras-refinaria/foto97.jpg",
+            "img/petrobras-refinaria/foto98.jpg",
+            "img/petrobras-refinaria/foto99.jpg",
+            "img/petrobras-refinaria/foto100.jpg",
+            "img/petrobras-refinaria/foto101.jpg",
+            "img/petrobras-refinaria/foto102.jpg",
+            "img/petrobras-refinaria/foto103.jpg",
+            "img/petrobras-refinaria/foto104.jpg",
+            "img/petrobras-refinaria/foto107.jpg",
+            "img/petrobras-refinaria/foto108.jpg",
+            "img/petrobras-refinaria/foto109.jpg",
+            "img/petrobras-refinaria/foto110.jpg",
+            "img/petrobras-refinaria/foto111.jpg",
+            "img/petrobras-refinaria/foto112.jpg",
+            "img/petrobras-refinaria/foto113.jpg",
+            "img/petrobras-refinaria/foto114.jpg",
+            "img/petrobras-refinaria/foto115.jpg",
+            "img/petrobras-refinaria/foto116.jpg",
+            "img/petrobras-refinaria/foto117.jpg",
+            "img/petrobras-refinaria/foto118.jpg",
+            "img/petrobras-refinaria/foto119.jpg",
+            "img/petrobras-refinaria/foto120.jpg",
+            "img/petrobras-refinaria/foto121.jpg",
+            "img/petrobras-refinaria/foto122.jpg",
+            "img/petrobras-refinaria/foto123.jpg"
+        ];
+        
+        const totalImages = images.length;
         const projectId = 'petrobras-refinaria';
         let currentImageIndex = 0;
 
         const galleryGrid = document.getElementById('galleryGrid');
-        for (let i = 1; i <= totalImages; i++) {
+        images.forEach((imagePath, index) => {
             const item = document.createElement('div');
             item.className = 'gallery-item';
             item.innerHTML = `
-                <img src="img/${projectId}/foto${i}.jpg" alt="Foto ${i}" loading="lazy">
+                <img src="${imagePath}" alt="Foto ${index + 1}" loading="lazy" onerror="this.parentElement.style.display='none'">
             `;
-            item.onclick = () => openLightbox(i - 1);
+            item.onclick = () => openLightbox(index);
             galleryGrid.appendChild(item);
-        }
+        });
 
         function openLightbox(index) {
             currentImageIndex = index;
@@ -549,7 +658,7 @@
 
         function updateLightboxImage() {
             const img = document.getElementById('lightboxImage');
-            img.src = `img/${projectId}/foto${currentImageIndex + 1}.jpg`;
+            img.src = images[currentImageIndex];
             document.getElementById('currentIndex').textContent = currentImageIndex + 1;
         }
 

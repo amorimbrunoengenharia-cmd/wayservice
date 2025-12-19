@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Canal de Denúncias - WayService</title>
+    <meta name="description" content="Canal confidencial para denúncias de fraudes, corrupção e violação de dados. Ambiente seguro e anônimo para relatos éticos.">
+    <meta name="keywords" content="Canal de denúncias, compliance, ética, fraude, corrupção, LGPD, proteção de dados">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Canal de Denúncias - WayService">
+    <meta property="og:description" content="Canal confidencial para denúncias de fraudes, corrupção e violação de dados pessoais.">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%2343E456' width='100' height='100' rx='20'/><path d='M30 70V30h8l12 20 12-20h8v40h-8V45L50 65 38 45v25z' fill='%231E1F27'/></svg>">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo/Ativo 2.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        .denuncia-hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .shield-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 2rem;
+            background: rgba(67, 228, 86, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .shield-icon svg {
+            width: 40px;
+            height: 40px;
+            stroke: #43E456;
+        }
+        
+        .denuncia-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        
+        .info-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-5px);
+            border-color: #43E456;
+            box-shadow: 0 10px 40px rgba(67, 228, 86, 0.1);
+        }
+        
+        .info-card-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(67, 228, 86, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .info-card-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: #43E456;
+        }
+        
+        .info-card h3 {
+            color: #fff;
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+        
+        .info-card p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+        
+        .denuncia-form {
+            width: 100%;
+            max-width: 800px;
+            margin: 3rem auto;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 3rem;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            box-sizing: border-box;
+        }
+        
+        @media (max-width: 768px) {
+            .denuncia-form {
+                padding: 2rem 1.5rem;
+                margin: 2rem 1rem;
+                width: calc(100% - 2rem);
+                border-radius: 16px;
+            }
+            
+            .form-section h3 {
+                font-size: 1rem;
+            }
+            
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                padding: 0.875rem;
+                font-size: 0.95rem;
+            }
+            
+            .submit-btn {
+                padding: 1rem;
+                font-size: 1rem;
+            }
+            
+            .denuncia-cards {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem;
+            }
+            
+            .info-card {
+                padding: 1.5rem;
+            }
+            
+            .alert-box {
+                padding: 1.25rem;
+                margin: 1.5rem 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .denuncia-form {
+                padding: 1.5rem 1rem;
+                margin: 1.5rem 0.5rem;
+                width: calc(100% - 1rem);
+            }
+            
+            .denuncia-hero {
+                padding: 100px 1rem 60px;
+            }
+            
+            .shield-icon {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .hero-subtitle {
+                font-size: 0.95rem;
+            }
+        }
+        
+        .form-section {
+            margin-bottom: 2rem;
+        }
+        
+        .form-section h3 {
+            color: #43E456;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #43E456;
+            box-shadow: 0 0 0 3px rgba(67, 228, 86, 0.1);
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-group small {
+            display: block;
+            margin-top: 0.5rem;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.875rem;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: start;
+            gap: 0.75rem;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-top: 0.25rem;
+        }
+        
+        .checkbox-group label {
+            margin: 0;
+        }
+        
+        .alert-box {
+            background: rgba(67, 228, 86, 0.1);
+            border: 1px solid rgba(67, 228, 86, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .alert-box h4 {
+            color: #43E456;
+            margin-bottom: 0.5rem;
+        }
+        
+        .alert-box ul {
+            color: rgba(255, 255, 255, 0.8);
+            margin-left: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 1.25rem;
+            background: linear-gradient(135deg, #43E456 0%, #3BC64A 100%);
+            color: #1E1F27;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(67, 228, 86, 0.3);
+        }
+        
+        .success-message {
+            display: none;
+            background: rgba(67, 228, 86, 0.1);
+            border: 1px solid #43E456;
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .success-message.show {
+            display: block;
+        }
+        
+        .success-message h3 {
+            color: #43E456;
+            margin-bottom: 1rem;
+        }
+        
+        .success-message p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-link">
+                <div class="logo">
+                    <img src="logo/Ativo 2.png" alt="WayService" class="logo-height-50">
+                </div>
+            </a>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+                        <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    </svg>
+                    <span>Início</span>
+                </a>
+                <a href="projetos.html" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path>
+                        <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path>
+                        <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path>
+                        <path d="M10 6h4"></path>
+                        <path d="M10 10h4"></path>
+                        <path d="M10 14h4"></path>
+                        <path d="M10 18h4"></path>
+                    </svg>
+                    <span>Projetos</span>
+                </a>
+                <a href="index.html#orcamento" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+                    </svg>
+                    <span>Orçamento</span>
+                </a>
+                <a href="index.html#contato" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    <span>Contato</span>
+                </a>
+                <a href="canal-denuncia.html" class="nav-link active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                    <span>Canal de Denúncias</span>
+                </a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="4" x2="20" y1="12" y2="12"></line>
+                    <line x1="4" x2="20" y1="6" y2="6"></line>
+                    <line x1="4" x2="20" y1="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5518997421905" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Falar no WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+        </svg>
+    </a>
+
+    <!-- Hero Section -->
+    <section class="denuncia-hero">
+        <div class="hero-background"></div>
+        <div class="particles-container"></div>
+        <div class="container">
+            <div class="hero-content reveal text-center max-width-900">
+                <div class="shield-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                </div>
+                <h1><span class="highlight">Canal de Denúncias</span></h1>
+                <p class="hero-subtitle">Espaço seguro e confidencial para relatos de fraudes, corrupção e violação de dados pessoais</p>
+                <div class="status-indicator justify-center margin-top-1-half">
+                    <span class="status-dot"></span>
+                    <span>Canal disponível 24/7 • Denúncias anônimas aceitas</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Informações sobre o canal -->
+    <section class="section">
+        <div class="container">
+            <div class="denuncia-cards">
+                <div class="info-card reveal">
+                    <div class="info-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 6v6l4 2"></path>
+                        </svg>
+                    </div>
+                    <h3>Disponível 24/7</h3>
+                    <p>Você pode fazer sua denúncia a qualquer momento, de forma segura e confidencial.</p>
+                </div>
+                
+                <div class="info-card reveal">
+                    <div class="info-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <line x1="1" y1="1" x2="23" y2="23"></line>
+                        </svg>
+                    </div>
+                    <h3>Anonimato Garantido</h3>
+                    <p>Sua identidade será mantida em sigilo absoluto. Denúncias anônimas são aceitas.</p>
+                </div>
+                
+                <div class="info-card reveal">
+                    <div class="info-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <h3>Ambiente Seguro</h3>
+                    <p>Sistema protegido e criptografado para garantir a segurança das informações.</p>
+                </div>
+            </div>
+
+            <!-- Alert Box -->
+            <div class="alert-box reveal">
+                <h4>📋 Tipos de Denúncias Aceitas:</h4>
+                <ul>
+                    <li>Fraudes e corrupção</li>
+                    <li>Violação de dados pessoais (LGPD)</li>
+                    <li>Conflito de interesses</li>
+                    <li>Assédio moral ou sexual</li>
+                    <li>Práticas discriminatórias</li>
+                    <li>Má conduta profissional</li>
+                    <li>Violações de segurança do trabalho</li>
+                    <li>Irregularidades em licitações e contratos</li>
+                </ul>
+            </div>
+
+            <!-- Formulário de Denúncia -->
+            <div class="denuncia-form reveal">
+                <h2 class="heading-green-center">Formulário de Denúncia</h2>
+                <p class="text-center-gray">
+                    Preencha o formulário abaixo. Campos marcados com * são obrigatórios.
+                </p>
+
+                <form id="denunciaForm" action="https://formsubmit.co/comercial@wayserviceltda.com" method="POST">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="🚨 Nova Denúncia - Canal de Compliance WayService">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="box">
+                    <input type="text" name="_honey" class="display-none" aria-hidden="true" tabindex="-1" autocomplete="off">
+                    <input type="hidden" name="_next" value="https://wayserviceltda.com/canal-denuncia.html?success=true">
+                    
+                    <!-- Campo de Protocolo (será preenchido via JavaScript) -->
+                    <input type="hidden" id="protocolo" name="Protocolo" value="">
+                    
+                    <!-- Identificação (Opcional) -->
+                    <div class="form-section">
+                        <h3>Identificação (Opcional)</h3>
+                        <div class="form-group">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" id="nome" name="Nome_Completo" placeholder="Deixe em branco para denúncia anônima">
+                            <small>A identificação é opcional. Você pode fazer uma denúncia anônima.</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-mail de Contato</label>
+                            <input type="email" id="email" name="Email_Contato" placeholder="seu@email.com">
+                            <small>Para retorno sobre a denúncia (opcional)</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" name="Telefone" placeholder="(00) 00000-0000">
+                        </div>
+                    </div>
+
+                    <!-- Informações da Denúncia -->
+                    <div class="form-section">
+                        <h3>Informações da Denúncia</h3>
+                        <div class="form-group">
+                            <label for="tipo">Tipo de Denúncia *</label>
+                            <select id="tipo" name="Tipo_de_Denuncia" required>
+                                <option value="">Selecione o tipo</option>
+                                <option value="fraude">Fraude ou Corrupção</option>
+                                <option value="lgpd">Violação de Dados Pessoais (LGPD)</option>
+                                <option value="conflito">Conflito de Interesses</option>
+                                <option value="assedio">Assédio Moral ou Sexual</option>
+                                <option value="discriminacao">Discriminação</option>
+                                <option value="conduta">Má Conduta Profissional</option>
+                                <option value="seguranca">Violação de Segurança do Trabalho</option>
+                                <option value="licitacao">Irregularidades em Licitações</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="local">Local do Ocorrido</label>
+                            <input type="text" id="local" name="Local_do_Ocorrido" placeholder="Obra, escritório, departamento, etc.">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="data">Data do Ocorrido</label>
+                            <input type="date" id="data" name="Data_do_Ocorrido">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="envolvidos">Pessoas Envolvidas</label>
+                            <input type="text" id="envolvidos" name="Pessoas_Envolvidas" placeholder="Nome(s) das pessoas envolvidas">
+                            <small>Se souber, informe o(s) nome(s) da(s) pessoa(s) envolvida(s)</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="descricao">Descrição Detalhada *</label>
+                            <textarea id="descricao" name="Descricao_Detalhada" required placeholder="Descreva o que aconteceu com o máximo de detalhes possível. Inclua datas, locais, nomes e quaisquer outras informações relevantes."></textarea>
+                            <small>Quanto mais detalhes você fornecer, mais eficaz será a investigação.</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="evidencias">Evidências Disponíveis</label>
+                            <textarea id="evidencias" name="Evidencias_Disponiveis" placeholder="Descreva se existem documentos, fotos, vídeos, e-mails ou outras evidências. Não é necessário anexar agora."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Termos -->
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="termos" name="Aceite_Termos" required value="Sim">
+                            <label for="termos">
+                                Declaro que as informações fornecidas são verdadeiras e estou ciente de que denúncias falsas podem resultar em medidas legais apropriadas. *
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Botão de Envio -->
+                    <button type="submit" class="submit-btn">
+                        Enviar Denúncia Confidencial
+                    </button>
+                </form>
+
+                <!-- Mensagem de Sucesso -->
+                <div class="success-message" id="successMessage">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#43E456" stroke-width="2" class="svg-margin-auto">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    <h3>Denúncia Recebida com Sucesso</h3>
+                    <p>Sua denúncia foi registrada e será analisada com total confidencialidade. Agradecemos sua coragem em reportar esta situação.</p>
+                    <p class="protocol-margin"><strong>Protocolo:</strong> <span id="protocolNumber"></span></p>
+                </div>
+            </div>
+
+            <!-- Informações Adicionais -->
+            <div class="alert-box reveal margin-top-3">
+                <h4>🔒 Proteção ao Denunciante</h4>
+                <ul>
+                    <li>Todas as denúncias são tratadas com absoluta confidencialidade</li>
+                    <li>É proibida qualquer forma de retaliação contra denunciantes</li>
+                    <li>A investigação será conduzida de forma imparcial</li>
+                    <li>As informações são armazenadas com segurança e criptografia</li>
+                    <li>Você pode acompanhar o andamento usando o número de protocolo</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="logo/Ativo 2.png" alt="WayService" class="logo-height-40">
+                    <p>Engenharia de Continuidade para seu projeto</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <a href="index.html">Início</a>
+                    <a href="projetos.html">Projetos</a>
+                    <a href="index.html#orcamento">Orçamento</a>
+                    <a href="index.html#contato">Contato</a>
+                    <a href="canal-denuncia.html">Canal de Denúncias</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>contato@wayservice.com</p>
+                    <p>(18) 99742-1905</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 WayService. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Gerar número de protocolo único ao carregar a página
+        function gerarProtocolo() {
+            const ano = new Date().getFullYear();
+            const mes = String(new Date().getMonth() + 1).padStart(2, '0');
+            const dia = String(new Date().getDate()).padStart(2, '0');
+            const numero = Math.floor(Math.random() * 9000) + 1000;
+            return `WS-${ano}${mes}${dia}-${numero}`;
+        }
+
+        // Gerar protocolo ao carregar a página
+        document.getElementById('protocolo').value = gerarProtocolo();
+
+        // Verificar se veio da página de sucesso
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === 'true') {
+            document.getElementById('denunciaForm').style.display = 'none';
+            document.getElementById('successMessage').classList.add('show');
+            document.getElementById('protocolNumber').textContent = 'Enviado com sucesso';
+            document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+</body>
+</html>

@@ -533,15 +533,19 @@ for projeto in projetos:
         responsavel = projeto.get('responsavel_tecnico', 'Acervo Técnico')
         header_badge = f'''<div class="header-badge">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <polyline points="16 11 18 13 22 9"></polyline>
             </svg>
-            <span>Responsável: {responsavel}</span>
+            <span>Gestão de Execução: {responsavel}</span>
         </div>'''
         lightbox_acervo = f'''<div class="acervo-badge">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <polyline points="16 11 18 13 22 9"></polyline>
                     </svg>
-                    <span>Responsável: {responsavel}</span>
+                    <span>Gestão de Execução: {responsavel}</span>
                 </div>'''
     
     # Card do Engenheiro Responsável
@@ -551,7 +555,7 @@ for projeto in projetos:
         tipo_autoria = projeto.get('tipo_autoria')
         
         if tipo_autoria == 'acervo_pessoal':
-            role_label = 'Engenheiro Responsável (Acervo Técnico)'
+            role_label = 'Engenheiro Responsável'
         else:
             role_label = 'Engenheiro Responsável pela Execução'
         
@@ -563,7 +567,7 @@ for projeto in projetos:
                 </svg>
             </div>
             <div class="engineer-info">
-                <div class="engineer-label">Responsável Técnico</div>
+                <div class="engineer-label">Gestão de Execução</div>
                 <div class="engineer-name">{responsavel_nome}</div>
                 <div class="engineer-role">{role_label}</div>
             </div>

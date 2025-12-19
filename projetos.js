@@ -188,9 +188,11 @@ function generateAcervoBadge(project) {
     return `
         <div class="acervo-badge">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <polyline points="16 11 18 13 22 9"></polyline>
             </svg>
-            <span>Responsável: ${responsavel}</span>
+            <span>Gestão de Execução: ${responsavel}</span>
         </div>
     `;
 }
@@ -273,9 +275,11 @@ function openGallery(project) {
         const acervoBadge = `
             <div class="lightbox-acervo-badge">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <polyline points="16 11 18 13 22 9"></polyline>
                 </svg>
-                <span>Acervo Técnico: ${project.responsavel_tecnico}</span>
+                <span>Gestão de Execução: ${project.responsavel_tecnico}</span>
             </div>
         `;
         detailsContent = acervoBadge + detailsContent;

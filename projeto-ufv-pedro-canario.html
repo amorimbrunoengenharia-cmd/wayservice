@@ -13,6 +13,7 @@
             left: 0;
             right: 0;
             background: rgba(30, 31, 39, 0.95);
+            -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(67, 228, 86, 0.2);
             padding: 1rem 2rem;
@@ -207,6 +208,7 @@
         .lightbox-info {
             width: 400px;
             background: rgba(26, 26, 46, 0.95);
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             padding: 2rem;
             overflow-y: auto;
@@ -317,6 +319,7 @@
             border: 1px solid #333;
             border-radius: 16px;
             padding: 2rem;
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             display: flex;
             align-items: center;
@@ -428,9 +431,11 @@
         </a>
         <div class="header-badge">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <polyline points="16 11 18 13 22 9"></polyline>
             </svg>
-            <span>Responsável: Eng. Bruno Amorim</span>
+            <span>Gestão de Execução: Eng. Bruno Amorim</span>
         </div>
     </nav>
 
@@ -474,9 +479,9 @@
                 </svg>
             </div>
             <div class="engineer-info">
-                <div class="engineer-label">Responsável Técnico</div>
+                <div class="engineer-label">Gestão de Execução</div>
                 <div class="engineer-name">Eng. Bruno Amorim</div>
-                <div class="engineer-role">Engenheiro Responsável (Acervo Técnico)</div>
+                <div class="engineer-role">Engenheiro Responsável</div>
             </div>
         </div>
 
@@ -519,21 +524,64 @@
         </div>
     </div>
 
-    <script>
-        const totalImages = 40;
+        <script>
+        const images = [
+            "img/ufv-pedro-canario/foto1.jpg",
+            "img/ufv-pedro-canario/foto2.jpg",
+            "img/ufv-pedro-canario/foto3.jpg",
+            "img/ufv-pedro-canario/foto4.jpg",
+            "img/ufv-pedro-canario/foto5.jpg",
+            "img/ufv-pedro-canario/foto6.jpg",
+            "img/ufv-pedro-canario/foto7.jpg",
+            "img/ufv-pedro-canario/foto8.jpg",
+            "img/ufv-pedro-canario/foto9.jpg",
+            "img/ufv-pedro-canario/foto10.jpg",
+            "img/ufv-pedro-canario/foto11.jpg",
+            "img/ufv-pedro-canario/foto12.jpg",
+            "img/ufv-pedro-canario/foto13.jpg",
+            "img/ufv-pedro-canario/foto14.jpg",
+            "img/ufv-pedro-canario/foto15.jpg",
+            "img/ufv-pedro-canario/foto16.jpg",
+            "img/ufv-pedro-canario/foto17.jpg",
+            "img/ufv-pedro-canario/foto18.jpg",
+            "img/ufv-pedro-canario/foto19.jpg",
+            "img/ufv-pedro-canario/foto20.jpg",
+            "img/ufv-pedro-canario/foto21.jpg",
+            "img/ufv-pedro-canario/foto22.jpg",
+            "img/ufv-pedro-canario/foto23.jpg",
+            "img/ufv-pedro-canario/foto24.jpg",
+            "img/ufv-pedro-canario/foto25.jpg",
+            "img/ufv-pedro-canario/foto26.jpg",
+            "img/ufv-pedro-canario/foto27.jpg",
+            "img/ufv-pedro-canario/foto28.jpg",
+            "img/ufv-pedro-canario/foto29.jpg",
+            "img/ufv-pedro-canario/foto30.jpg",
+            "img/ufv-pedro-canario/foto31.jpg",
+            "img/ufv-pedro-canario/foto32.jpg",
+            "img/ufv-pedro-canario/foto33.jpg",
+            "img/ufv-pedro-canario/foto34.jpg",
+            "img/ufv-pedro-canario/foto35.jpg",
+            "img/ufv-pedro-canario/foto36.jpg",
+            "img/ufv-pedro-canario/foto37.jpg",
+            "img/ufv-pedro-canario/foto38.jpg",
+            "img/ufv-pedro-canario/foto39.jpg",
+            "img/ufv-pedro-canario/foto40.jpg"
+        ];
+        
+        const totalImages = images.length;
         const projectId = 'ufv-pedro-canario';
         let currentImageIndex = 0;
 
         const galleryGrid = document.getElementById('galleryGrid');
-        for (let i = 1; i <= totalImages; i++) {
+        images.forEach((imagePath, index) => {
             const item = document.createElement('div');
             item.className = 'gallery-item';
             item.innerHTML = `
-                <img src="img/${projectId}/foto${i}.jpg" alt="Foto ${i}" loading="lazy">
+                <img src="${imagePath}" alt="Foto ${index + 1}" loading="lazy" onerror="this.parentElement.style.display='none'">
             `;
-            item.onclick = () => openLightbox(i - 1);
+            item.onclick = () => openLightbox(index);
             galleryGrid.appendChild(item);
-        }
+        });
 
         function openLightbox(index) {
             currentImageIndex = index;
@@ -554,7 +602,7 @@
 
         function updateLightboxImage() {
             const img = document.getElementById('lightboxImage');
-            img.src = `img/${projectId}/foto${currentImageIndex + 1}.jpg`;
+            img.src = images[currentImageIndex];
             document.getElementById('currentIndex').textContent = currentImageIndex + 1;
         }
 

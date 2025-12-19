@@ -13,6 +13,7 @@
             left: 0;
             right: 0;
             background: rgba(30, 31, 39, 0.95);
+            -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(67, 228, 86, 0.2);
             padding: 1rem 2rem;
@@ -207,6 +208,7 @@
         .lightbox-info {
             width: 400px;
             background: rgba(26, 26, 46, 0.95);
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             padding: 2rem;
             overflow-y: auto;
@@ -317,6 +319,7 @@
             border: 1px solid #333;
             border-radius: 16px;
             padding: 2rem;
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             display: flex;
             align-items: center;
@@ -428,9 +431,11 @@
         </a>
         <div class="header-badge">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <polyline points="16 11 18 13 22 9"></polyline>
             </svg>
-            <span>Responsável: Eng. José Sérgio</span>
+            <span>Gestão de Execução: Eng. José Sérgio</span>
         </div>
     </nav>
 
@@ -474,9 +479,9 @@
                 </svg>
             </div>
             <div class="engineer-info">
-                <div class="engineer-label">Responsável Técnico</div>
+                <div class="engineer-label">Gestão de Execução</div>
                 <div class="engineer-name">Eng. José Sérgio</div>
-                <div class="engineer-role">Engenheiro Responsável (Acervo Técnico)</div>
+                <div class="engineer-role">Engenheiro Responsável</div>
             </div>
         </div>
 
@@ -491,7 +496,7 @@
             <div class="lightbox-image-wrapper">
                 <img id="lightboxImage" class="lightbox-image" src="" alt="">
                 <div class="lightbox-counter">
-                    <span id="currentIndex">1</span> / <span id="totalImages">315</span>
+                    <span id="currentIndex">1</span> / <span id="totalImages">278</span>
                 </div>
             </div>
             <div class="lightbox-info">
@@ -519,21 +524,302 @@
         </div>
     </div>
 
-    <script>
-        const totalImages = 315;
+        <script>
+        const images = [
+            "img/forum-auriflama/foto1.jpg",
+            "img/forum-auriflama/foto2.jpg",
+            "img/forum-auriflama/foto3.jpg",
+            "img/forum-auriflama/foto4.jpg",
+            "img/forum-auriflama/foto5.jpg",
+            "img/forum-auriflama/foto9.jpg",
+            "img/forum-auriflama/foto11.jpg",
+            "img/forum-auriflama/foto12.jpg",
+            "img/forum-auriflama/foto13.jpg",
+            "img/forum-auriflama/foto14.jpg",
+            "img/forum-auriflama/foto15.jpg",
+            "img/forum-auriflama/foto16.jpg",
+            "img/forum-auriflama/foto17.jpg",
+            "img/forum-auriflama/foto18.jpg",
+            "img/forum-auriflama/foto19.jpg",
+            "img/forum-auriflama/foto20.jpg",
+            "img/forum-auriflama/foto21.jpg",
+            "img/forum-auriflama/foto22.jpg",
+            "img/forum-auriflama/foto23.jpg",
+            "img/forum-auriflama/foto24.jpg",
+            "img/forum-auriflama/foto25.jpg",
+            "img/forum-auriflama/foto26.jpg",
+            "img/forum-auriflama/foto27.jpg",
+            "img/forum-auriflama/foto28.jpg",
+            "img/forum-auriflama/foto29.jpg",
+            "img/forum-auriflama/foto30.jpg",
+            "img/forum-auriflama/foto31.jpg",
+            "img/forum-auriflama/foto32.jpg",
+            "img/forum-auriflama/foto33.jpg",
+            "img/forum-auriflama/foto34.jpg",
+            "img/forum-auriflama/foto35.jpg",
+            "img/forum-auriflama/foto36.jpg",
+            "img/forum-auriflama/foto37.jpg",
+            "img/forum-auriflama/foto38.jpg",
+            "img/forum-auriflama/foto39.jpg",
+            "img/forum-auriflama/foto40.jpg",
+            "img/forum-auriflama/foto41.jpg",
+            "img/forum-auriflama/foto42.jpg",
+            "img/forum-auriflama/foto43.jpg",
+            "img/forum-auriflama/foto44.jpg",
+            "img/forum-auriflama/foto45.jpg",
+            "img/forum-auriflama/foto46.jpg",
+            "img/forum-auriflama/foto47.jpg",
+            "img/forum-auriflama/foto48.jpg",
+            "img/forum-auriflama/foto49.jpg",
+            "img/forum-auriflama/foto50.jpg",
+            "img/forum-auriflama/foto51.jpg",
+            "img/forum-auriflama/foto52.jpg",
+            "img/forum-auriflama/foto53.jpg",
+            "img/forum-auriflama/foto54.jpg",
+            "img/forum-auriflama/foto55.jpg",
+            "img/forum-auriflama/foto56.jpg",
+            "img/forum-auriflama/foto57.jpg",
+            "img/forum-auriflama/foto58.jpg",
+            "img/forum-auriflama/foto59.jpg",
+            "img/forum-auriflama/foto60.jpg",
+            "img/forum-auriflama/foto61.jpg",
+            "img/forum-auriflama/foto62.jpg",
+            "img/forum-auriflama/foto63.jpg",
+            "img/forum-auriflama/foto64.jpg",
+            "img/forum-auriflama/foto65.jpg",
+            "img/forum-auriflama/foto66.jpg",
+            "img/forum-auriflama/foto67.jpg",
+            "img/forum-auriflama/foto68.jpg",
+            "img/forum-auriflama/foto69.jpg",
+            "img/forum-auriflama/foto71.jpg",
+            "img/forum-auriflama/foto72.jpg",
+            "img/forum-auriflama/foto73.jpg",
+            "img/forum-auriflama/foto74.jpg",
+            "img/forum-auriflama/foto75.jpg",
+            "img/forum-auriflama/foto76.jpg",
+            "img/forum-auriflama/foto77.jpg",
+            "img/forum-auriflama/foto78.jpg",
+            "img/forum-auriflama/foto79.jpg",
+            "img/forum-auriflama/foto80.jpg",
+            "img/forum-auriflama/foto81.jpg",
+            "img/forum-auriflama/foto85.jpg",
+            "img/forum-auriflama/foto86.jpg",
+            "img/forum-auriflama/foto87.jpg",
+            "img/forum-auriflama/foto88.jpg",
+            "img/forum-auriflama/foto89.jpg",
+            "img/forum-auriflama/foto90.jpg",
+            "img/forum-auriflama/foto91.jpg",
+            "img/forum-auriflama/foto92.jpg",
+            "img/forum-auriflama/foto93.jpg",
+            "img/forum-auriflama/foto94.jpg",
+            "img/forum-auriflama/foto95.jpg",
+            "img/forum-auriflama/foto96.jpg",
+            "img/forum-auriflama/foto97.jpg",
+            "img/forum-auriflama/foto98.jpg",
+            "img/forum-auriflama/foto99.jpg",
+            "img/forum-auriflama/foto100.jpg",
+            "img/forum-auriflama/foto101.jpg",
+            "img/forum-auriflama/foto102.jpg",
+            "img/forum-auriflama/foto103.jpg",
+            "img/forum-auriflama/foto104.jpg",
+            "img/forum-auriflama/foto110.jpg",
+            "img/forum-auriflama/foto111.jpg",
+            "img/forum-auriflama/foto113.jpg",
+            "img/forum-auriflama/foto114.jpg",
+            "img/forum-auriflama/foto115.jpg",
+            "img/forum-auriflama/foto116.jpg",
+            "img/forum-auriflama/foto117.jpg",
+            "img/forum-auriflama/foto118.jpg",
+            "img/forum-auriflama/foto119.jpg",
+            "img/forum-auriflama/foto120.jpg",
+            "img/forum-auriflama/foto121.jpg",
+            "img/forum-auriflama/foto122.jpg",
+            "img/forum-auriflama/foto123.jpg",
+            "img/forum-auriflama/foto124.jpg",
+            "img/forum-auriflama/foto125.jpg",
+            "img/forum-auriflama/foto126.jpg",
+            "img/forum-auriflama/foto127.jpg",
+            "img/forum-auriflama/foto128.jpg",
+            "img/forum-auriflama/foto129.jpg",
+            "img/forum-auriflama/foto130.jpg",
+            "img/forum-auriflama/foto131.jpg",
+            "img/forum-auriflama/foto132.jpg",
+            "img/forum-auriflama/foto133.jpg",
+            "img/forum-auriflama/foto134.jpg",
+            "img/forum-auriflama/foto135.jpg",
+            "img/forum-auriflama/foto136.jpg",
+            "img/forum-auriflama/foto137.jpg",
+            "img/forum-auriflama/foto138.jpg",
+            "img/forum-auriflama/foto139.jpg",
+            "img/forum-auriflama/foto140.jpg",
+            "img/forum-auriflama/foto141.jpg",
+            "img/forum-auriflama/foto142.jpg",
+            "img/forum-auriflama/foto143.jpg",
+            "img/forum-auriflama/foto144.jpg",
+            "img/forum-auriflama/foto145.jpg",
+            "img/forum-auriflama/foto146.jpg",
+            "img/forum-auriflama/foto147.jpg",
+            "img/forum-auriflama/foto148.jpg",
+            "img/forum-auriflama/foto149.jpg",
+            "img/forum-auriflama/foto150.jpg",
+            "img/forum-auriflama/foto151.jpg",
+            "img/forum-auriflama/foto152.jpg",
+            "img/forum-auriflama/foto153.jpg",
+            "img/forum-auriflama/foto154.jpg",
+            "img/forum-auriflama/foto155.jpg",
+            "img/forum-auriflama/foto156.jpg",
+            "img/forum-auriflama/foto157.jpg",
+            "img/forum-auriflama/foto158.jpg",
+            "img/forum-auriflama/foto159.jpg",
+            "img/forum-auriflama/foto160.jpg",
+            "img/forum-auriflama/foto161.jpg",
+            "img/forum-auriflama/foto162.jpg",
+            "img/forum-auriflama/foto163.jpg",
+            "img/forum-auriflama/foto164.jpg",
+            "img/forum-auriflama/foto165.jpg",
+            "img/forum-auriflama/foto166.jpg",
+            "img/forum-auriflama/foto167.jpg",
+            "img/forum-auriflama/foto168.jpg",
+            "img/forum-auriflama/foto169.jpg",
+            "img/forum-auriflama/foto170.jpg",
+            "img/forum-auriflama/foto171.jpg",
+            "img/forum-auriflama/foto172.jpg",
+            "img/forum-auriflama/foto173.jpg",
+            "img/forum-auriflama/foto174.jpg",
+            "img/forum-auriflama/foto176.jpg",
+            "img/forum-auriflama/foto177.jpg",
+            "img/forum-auriflama/foto178.jpg",
+            "img/forum-auriflama/foto179.jpg",
+            "img/forum-auriflama/foto180.jpg",
+            "img/forum-auriflama/foto181.jpg",
+            "img/forum-auriflama/foto182.jpg",
+            "img/forum-auriflama/foto183.jpg",
+            "img/forum-auriflama/foto184.jpg",
+            "img/forum-auriflama/foto185.jpg",
+            "img/forum-auriflama/foto186.jpg",
+            "img/forum-auriflama/foto187.jpg",
+            "img/forum-auriflama/foto188.jpg",
+            "img/forum-auriflama/foto189.jpg",
+            "img/forum-auriflama/foto190.jpg",
+            "img/forum-auriflama/foto191.jpg",
+            "img/forum-auriflama/foto192.jpg",
+            "img/forum-auriflama/foto193.jpg",
+            "img/forum-auriflama/foto194.jpg",
+            "img/forum-auriflama/foto195.jpg",
+            "img/forum-auriflama/foto196.jpg",
+            "img/forum-auriflama/foto197.jpg",
+            "img/forum-auriflama/foto198.jpg",
+            "img/forum-auriflama/foto199.jpg",
+            "img/forum-auriflama/foto200.jpg",
+            "img/forum-auriflama/foto201.jpg",
+            "img/forum-auriflama/foto203.jpg",
+            "img/forum-auriflama/foto204.jpg",
+            "img/forum-auriflama/foto205.jpg",
+            "img/forum-auriflama/foto206.jpg",
+            "img/forum-auriflama/foto207.jpg",
+            "img/forum-auriflama/foto208.jpg",
+            "img/forum-auriflama/foto209.jpg",
+            "img/forum-auriflama/foto210.jpg",
+            "img/forum-auriflama/foto211.jpg",
+            "img/forum-auriflama/foto212.jpg",
+            "img/forum-auriflama/foto213.jpg",
+            "img/forum-auriflama/foto214.jpg",
+            "img/forum-auriflama/foto215.jpg",
+            "img/forum-auriflama/foto216.jpg",
+            "img/forum-auriflama/foto217.jpg",
+            "img/forum-auriflama/foto218.jpg",
+            "img/forum-auriflama/foto219.jpg",
+            "img/forum-auriflama/foto220.jpg",
+            "img/forum-auriflama/foto221.jpg",
+            "img/forum-auriflama/foto222.jpg",
+            "img/forum-auriflama/foto223.jpg",
+            "img/forum-auriflama/foto224.jpg",
+            "img/forum-auriflama/foto225.jpg",
+            "img/forum-auriflama/foto226.jpg",
+            "img/forum-auriflama/foto227.jpg",
+            "img/forum-auriflama/foto228.jpg",
+            "img/forum-auriflama/foto229.jpg",
+            "img/forum-auriflama/foto230.jpg",
+            "img/forum-auriflama/foto231.jpg",
+            "img/forum-auriflama/foto232.jpg",
+            "img/forum-auriflama/foto233.jpg",
+            "img/forum-auriflama/foto234.jpg",
+            "img/forum-auriflama/foto235.jpg",
+            "img/forum-auriflama/foto236.jpg",
+            "img/forum-auriflama/foto237.jpg",
+            "img/forum-auriflama/foto238.jpg",
+            "img/forum-auriflama/foto239.jpg",
+            "img/forum-auriflama/foto240.jpg",
+            "img/forum-auriflama/foto243.jpg",
+            "img/forum-auriflama/foto244.jpg",
+            "img/forum-auriflama/foto246.jpg",
+            "img/forum-auriflama/foto247.jpg",
+            "img/forum-auriflama/foto248.jpg",
+            "img/forum-auriflama/foto249.jpg",
+            "img/forum-auriflama/foto250.jpg",
+            "img/forum-auriflama/foto251.jpg",
+            "img/forum-auriflama/foto252.jpg",
+            "img/forum-auriflama/foto253.jpg",
+            "img/forum-auriflama/foto254.jpg",
+            "img/forum-auriflama/foto256.jpg",
+            "img/forum-auriflama/foto257.jpg",
+            "img/forum-auriflama/foto258.jpg",
+            "img/forum-auriflama/foto259.jpg",
+            "img/forum-auriflama/foto260.jpg",
+            "img/forum-auriflama/foto261.jpg",
+            "img/forum-auriflama/foto262.jpg",
+            "img/forum-auriflama/foto263.jpg",
+            "img/forum-auriflama/foto264.jpg",
+            "img/forum-auriflama/foto265.jpg",
+            "img/forum-auriflama/foto266.jpg",
+            "img/forum-auriflama/foto267.jpg",
+            "img/forum-auriflama/foto268.jpg",
+            "img/forum-auriflama/foto269.jpg",
+            "img/forum-auriflama/foto270.jpg",
+            "img/forum-auriflama/foto271.jpg",
+            "img/forum-auriflama/foto272.jpg",
+            "img/forum-auriflama/foto273.jpg",
+            "img/forum-auriflama/foto274.jpg",
+            "img/forum-auriflama/foto275.jpg",
+            "img/forum-auriflama/foto277.jpg",
+            "img/forum-auriflama/foto279.jpg",
+            "img/forum-auriflama/foto280.jpg",
+            "img/forum-auriflama/foto282.jpg",
+            "img/forum-auriflama/foto284.jpg",
+            "img/forum-auriflama/foto286.jpg",
+            "img/forum-auriflama/foto287.jpg",
+            "img/forum-auriflama/foto291.jpg",
+            "img/forum-auriflama/foto292.jpg",
+            "img/forum-auriflama/foto294.jpg",
+            "img/forum-auriflama/foto296.jpg",
+            "img/forum-auriflama/foto297.jpg",
+            "img/forum-auriflama/foto298.jpg",
+            "img/forum-auriflama/foto299.jpg",
+            "img/forum-auriflama/foto301.jpg",
+            "img/forum-auriflama/foto303.jpg",
+            "img/forum-auriflama/foto305.jpg",
+            "img/forum-auriflama/foto307.jpg",
+            "img/forum-auriflama/foto309.jpg",
+            "img/forum-auriflama/foto311.jpg",
+            "img/forum-auriflama/foto313.jpg",
+            "img/forum-auriflama/foto314.jpg",
+            "img/forum-auriflama/foto315.jpg"
+        ];
+        
+        const totalImages = images.length;
         const projectId = 'forum-auriflama';
         let currentImageIndex = 0;
 
         const galleryGrid = document.getElementById('galleryGrid');
-        for (let i = 1; i <= totalImages; i++) {
+        images.forEach((imagePath, index) => {
             const item = document.createElement('div');
             item.className = 'gallery-item';
             item.innerHTML = `
-                <img src="img/${projectId}/foto${i}.jpg" alt="Foto ${i}" loading="lazy">
+                <img src="${imagePath}" alt="Foto ${index + 1}" loading="lazy" onerror="this.parentElement.style.display='none'">
             `;
-            item.onclick = () => openLightbox(i - 1);
+            item.onclick = () => openLightbox(index);
             galleryGrid.appendChild(item);
-        }
+        });
 
         function openLightbox(index) {
             currentImageIndex = index;
@@ -554,7 +840,7 @@
 
         function updateLightboxImage() {
             const img = document.getElementById('lightboxImage');
-            img.src = `img/${projectId}/foto${currentImageIndex + 1}.jpg`;
+            img.src = images[currentImageIndex];
             document.getElementById('currentIndex').textContent = currentImageIndex + 1;
         }
 

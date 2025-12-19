@@ -13,6 +13,7 @@
             left: 0;
             right: 0;
             background: rgba(30, 31, 39, 0.95);
+            -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(67, 228, 86, 0.2);
             padding: 1rem 2rem;
@@ -207,6 +208,7 @@
         .lightbox-info {
             width: 400px;
             background: rgba(26, 26, 46, 0.95);
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             padding: 2rem;
             overflow-y: auto;
@@ -317,6 +319,7 @@
             border: 1px solid #333;
             border-radius: 16px;
             padding: 2rem;
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             display: flex;
             align-items: center;
@@ -428,9 +431,11 @@
         </a>
         <div class="header-badge">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <polyline points="16 11 18 13 22 9"></polyline>
             </svg>
-            <span>Responsável: Eng. José Sérgio</span>
+            <span>Gestão de Execução: Eng. José Sérgio</span>
         </div>
     </nav>
 
@@ -474,9 +479,9 @@
                 </svg>
             </div>
             <div class="engineer-info">
-                <div class="engineer-label">Responsável Técnico</div>
+                <div class="engineer-label">Gestão de Execução</div>
                 <div class="engineer-name">Eng. José Sérgio</div>
-                <div class="engineer-role">Engenheiro Responsável (Acervo Técnico)</div>
+                <div class="engineer-role">Engenheiro Responsável</div>
             </div>
         </div>
 
@@ -491,7 +496,7 @@
             <div class="lightbox-image-wrapper">
                 <img id="lightboxImage" class="lightbox-image" src="" alt="">
                 <div class="lightbox-counter">
-                    <span id="currentIndex">1</span> / <span id="totalImages">342</span>
+                    <span id="currentIndex">1</span> / <span id="totalImages">330</span>
                 </div>
             </div>
             <div class="lightbox-info">
@@ -519,21 +524,354 @@
         </div>
     </div>
 
-    <script>
-        const totalImages = 342;
+        <script>
+        const images = [
+            "img/forum-jales/foto1.jpg",
+            "img/forum-jales/foto2.jpg",
+            "img/forum-jales/foto3.jpg",
+            "img/forum-jales/foto4.jpg",
+            "img/forum-jales/foto5.jpg",
+            "img/forum-jales/foto6.jpg",
+            "img/forum-jales/foto7.jpg",
+            "img/forum-jales/foto8.jpg",
+            "img/forum-jales/foto9.jpg",
+            "img/forum-jales/foto10.jpg",
+            "img/forum-jales/foto11.jpg",
+            "img/forum-jales/foto12.jpg",
+            "img/forum-jales/foto13.jpg",
+            "img/forum-jales/foto14.jpg",
+            "img/forum-jales/foto15.jpg",
+            "img/forum-jales/foto16.jpg",
+            "img/forum-jales/foto17.jpg",
+            "img/forum-jales/foto18.jpg",
+            "img/forum-jales/foto19.jpg",
+            "img/forum-jales/foto20.jpg",
+            "img/forum-jales/foto21.jpg",
+            "img/forum-jales/foto22.jpg",
+            "img/forum-jales/foto23.jpg",
+            "img/forum-jales/foto24.jpg",
+            "img/forum-jales/foto25.jpg",
+            "img/forum-jales/foto26.jpg",
+            "img/forum-jales/foto27.jpg",
+            "img/forum-jales/foto28.jpg",
+            "img/forum-jales/foto29.jpg",
+            "img/forum-jales/foto30.jpg",
+            "img/forum-jales/foto31.jpg",
+            "img/forum-jales/foto32.jpg",
+            "img/forum-jales/foto33.jpg",
+            "img/forum-jales/foto34.jpg",
+            "img/forum-jales/foto35.jpg",
+            "img/forum-jales/foto36.jpg",
+            "img/forum-jales/foto37.jpg",
+            "img/forum-jales/foto38.jpg",
+            "img/forum-jales/foto39.jpg",
+            "img/forum-jales/foto40.jpg",
+            "img/forum-jales/foto41.jpg",
+            "img/forum-jales/foto42.jpg",
+            "img/forum-jales/foto43.jpg",
+            "img/forum-jales/foto44.jpg",
+            "img/forum-jales/foto45.jpg",
+            "img/forum-jales/foto46.jpg",
+            "img/forum-jales/foto47.jpg",
+            "img/forum-jales/foto48.jpg",
+            "img/forum-jales/foto49.jpg",
+            "img/forum-jales/foto50.jpg",
+            "img/forum-jales/foto51.jpg",
+            "img/forum-jales/foto52.jpg",
+            "img/forum-jales/foto53.jpg",
+            "img/forum-jales/foto54.jpg",
+            "img/forum-jales/foto55.jpg",
+            "img/forum-jales/foto56.jpg",
+            "img/forum-jales/foto57.jpg",
+            "img/forum-jales/foto58.jpg",
+            "img/forum-jales/foto59.jpg",
+            "img/forum-jales/foto60.jpg",
+            "img/forum-jales/foto61.jpg",
+            "img/forum-jales/foto62.jpg",
+            "img/forum-jales/foto63.jpg",
+            "img/forum-jales/foto64.jpg",
+            "img/forum-jales/foto65.jpg",
+            "img/forum-jales/foto66.jpg",
+            "img/forum-jales/foto67.jpg",
+            "img/forum-jales/foto68.jpg",
+            "img/forum-jales/foto69.jpg",
+            "img/forum-jales/foto70.jpg",
+            "img/forum-jales/foto71.jpg",
+            "img/forum-jales/foto72.jpg",
+            "img/forum-jales/foto73.jpg",
+            "img/forum-jales/foto75.jpg",
+            "img/forum-jales/foto76.jpg",
+            "img/forum-jales/foto77.jpg",
+            "img/forum-jales/foto78.jpg",
+            "img/forum-jales/foto81.jpg",
+            "img/forum-jales/foto82.jpg",
+            "img/forum-jales/foto83.jpg",
+            "img/forum-jales/foto84.jpg",
+            "img/forum-jales/foto86.jpg",
+            "img/forum-jales/foto87.jpg",
+            "img/forum-jales/foto88.jpg",
+            "img/forum-jales/foto89.jpg",
+            "img/forum-jales/foto90.jpg",
+            "img/forum-jales/foto91.jpg",
+            "img/forum-jales/foto92.jpg",
+            "img/forum-jales/foto93.jpg",
+            "img/forum-jales/foto94.jpg",
+            "img/forum-jales/foto95.jpg",
+            "img/forum-jales/foto96.jpg",
+            "img/forum-jales/foto97.jpg",
+            "img/forum-jales/foto98.jpg",
+            "img/forum-jales/foto99.jpg",
+            "img/forum-jales/foto100.jpg",
+            "img/forum-jales/foto101.jpg",
+            "img/forum-jales/foto102.jpg",
+            "img/forum-jales/foto103.jpg",
+            "img/forum-jales/foto104.jpg",
+            "img/forum-jales/foto105.jpg",
+            "img/forum-jales/foto106.jpg",
+            "img/forum-jales/foto107.jpg",
+            "img/forum-jales/foto108.jpg",
+            "img/forum-jales/foto109.jpg",
+            "img/forum-jales/foto110.jpg",
+            "img/forum-jales/foto111.jpg",
+            "img/forum-jales/foto112.jpg",
+            "img/forum-jales/foto113.jpg",
+            "img/forum-jales/foto114.jpg",
+            "img/forum-jales/foto115.jpg",
+            "img/forum-jales/foto116.jpg",
+            "img/forum-jales/foto117.jpg",
+            "img/forum-jales/foto118.jpg",
+            "img/forum-jales/foto119.jpg",
+            "img/forum-jales/foto120.jpg",
+            "img/forum-jales/foto121.jpg",
+            "img/forum-jales/foto122.jpg",
+            "img/forum-jales/foto123.jpg",
+            "img/forum-jales/foto124.jpg",
+            "img/forum-jales/foto125.jpg",
+            "img/forum-jales/foto126.jpg",
+            "img/forum-jales/foto127.jpg",
+            "img/forum-jales/foto128.jpg",
+            "img/forum-jales/foto129.jpg",
+            "img/forum-jales/foto130.jpg",
+            "img/forum-jales/foto131.jpg",
+            "img/forum-jales/foto132.jpg",
+            "img/forum-jales/foto133.jpg",
+            "img/forum-jales/foto134.jpg",
+            "img/forum-jales/foto135.jpg",
+            "img/forum-jales/foto136.jpg",
+            "img/forum-jales/foto137.jpg",
+            "img/forum-jales/foto138.jpg",
+            "img/forum-jales/foto139.jpg",
+            "img/forum-jales/foto140.jpg",
+            "img/forum-jales/foto141.jpg",
+            "img/forum-jales/foto142.jpg",
+            "img/forum-jales/foto143.jpg",
+            "img/forum-jales/foto144.jpg",
+            "img/forum-jales/foto145.jpg",
+            "img/forum-jales/foto146.jpg",
+            "img/forum-jales/foto147.jpg",
+            "img/forum-jales/foto148.jpg",
+            "img/forum-jales/foto149.jpg",
+            "img/forum-jales/foto150.jpg",
+            "img/forum-jales/foto151.jpg",
+            "img/forum-jales/foto152.jpg",
+            "img/forum-jales/foto153.jpg",
+            "img/forum-jales/foto154.jpg",
+            "img/forum-jales/foto155.jpg",
+            "img/forum-jales/foto156.jpg",
+            "img/forum-jales/foto157.jpg",
+            "img/forum-jales/foto158.jpg",
+            "img/forum-jales/foto159.jpg",
+            "img/forum-jales/foto160.jpg",
+            "img/forum-jales/foto161.jpg",
+            "img/forum-jales/foto162.jpg",
+            "img/forum-jales/foto163.jpg",
+            "img/forum-jales/foto164.jpg",
+            "img/forum-jales/foto165.jpg",
+            "img/forum-jales/foto168.jpg",
+            "img/forum-jales/foto169.jpg",
+            "img/forum-jales/foto170.jpg",
+            "img/forum-jales/foto171.jpg",
+            "img/forum-jales/foto172.jpg",
+            "img/forum-jales/foto173.jpg",
+            "img/forum-jales/foto174.jpg",
+            "img/forum-jales/foto175.jpg",
+            "img/forum-jales/foto176.jpg",
+            "img/forum-jales/foto177.jpg",
+            "img/forum-jales/foto178.jpg",
+            "img/forum-jales/foto179.jpg",
+            "img/forum-jales/foto180.jpg",
+            "img/forum-jales/foto181.jpg",
+            "img/forum-jales/foto182.jpg",
+            "img/forum-jales/foto184.jpg",
+            "img/forum-jales/foto185.jpg",
+            "img/forum-jales/foto186.jpg",
+            "img/forum-jales/foto187.jpg",
+            "img/forum-jales/foto188.jpg",
+            "img/forum-jales/foto189.jpg",
+            "img/forum-jales/foto190.jpg",
+            "img/forum-jales/foto191.jpg",
+            "img/forum-jales/foto192.jpg",
+            "img/forum-jales/foto193.jpg",
+            "img/forum-jales/foto194.jpg",
+            "img/forum-jales/foto195.jpg",
+            "img/forum-jales/foto196.jpg",
+            "img/forum-jales/foto197.jpg",
+            "img/forum-jales/foto198.jpg",
+            "img/forum-jales/foto199.jpg",
+            "img/forum-jales/foto200.jpg",
+            "img/forum-jales/foto201.jpg",
+            "img/forum-jales/foto202.jpg",
+            "img/forum-jales/foto203.jpg",
+            "img/forum-jales/foto204.jpg",
+            "img/forum-jales/foto205.jpg",
+            "img/forum-jales/foto206.jpg",
+            "img/forum-jales/foto207.jpg",
+            "img/forum-jales/foto208.jpg",
+            "img/forum-jales/foto209.jpg",
+            "img/forum-jales/foto210.jpg",
+            "img/forum-jales/foto211.jpg",
+            "img/forum-jales/foto212.jpg",
+            "img/forum-jales/foto213.jpg",
+            "img/forum-jales/foto214.jpg",
+            "img/forum-jales/foto215.jpg",
+            "img/forum-jales/foto216.jpg",
+            "img/forum-jales/foto217.jpg",
+            "img/forum-jales/foto218.jpg",
+            "img/forum-jales/foto219.jpg",
+            "img/forum-jales/foto220.jpg",
+            "img/forum-jales/foto221.jpg",
+            "img/forum-jales/foto222.jpg",
+            "img/forum-jales/foto223.jpg",
+            "img/forum-jales/foto224.jpg",
+            "img/forum-jales/foto225.jpg",
+            "img/forum-jales/foto226.jpg",
+            "img/forum-jales/foto227.jpg",
+            "img/forum-jales/foto228.jpg",
+            "img/forum-jales/foto229.jpg",
+            "img/forum-jales/foto230.jpg",
+            "img/forum-jales/foto231.jpg",
+            "img/forum-jales/foto232.jpg",
+            "img/forum-jales/foto233.jpg",
+            "img/forum-jales/foto234.jpg",
+            "img/forum-jales/foto235.jpg",
+            "img/forum-jales/foto236.jpg",
+            "img/forum-jales/foto237.jpg",
+            "img/forum-jales/foto238.jpg",
+            "img/forum-jales/foto239.jpg",
+            "img/forum-jales/foto240.jpg",
+            "img/forum-jales/foto241.jpg",
+            "img/forum-jales/foto242.jpg",
+            "img/forum-jales/foto243.jpg",
+            "img/forum-jales/foto244.jpg",
+            "img/forum-jales/foto245.jpg",
+            "img/forum-jales/foto246.jpg",
+            "img/forum-jales/foto247.jpg",
+            "img/forum-jales/foto248.jpg",
+            "img/forum-jales/foto249.jpg",
+            "img/forum-jales/foto250.jpg",
+            "img/forum-jales/foto251.jpg",
+            "img/forum-jales/foto252.jpg",
+            "img/forum-jales/foto253.jpg",
+            "img/forum-jales/foto254.jpg",
+            "img/forum-jales/foto255.jpg",
+            "img/forum-jales/foto256.jpg",
+            "img/forum-jales/foto257.jpg",
+            "img/forum-jales/foto258.jpg",
+            "img/forum-jales/foto259.jpg",
+            "img/forum-jales/foto260.jpg",
+            "img/forum-jales/foto261.jpg",
+            "img/forum-jales/foto262.jpg",
+            "img/forum-jales/foto263.jpg",
+            "img/forum-jales/foto264.jpg",
+            "img/forum-jales/foto265.jpg",
+            "img/forum-jales/foto266.jpg",
+            "img/forum-jales/foto267.jpg",
+            "img/forum-jales/foto268.jpg",
+            "img/forum-jales/foto269.jpg",
+            "img/forum-jales/foto270.jpg",
+            "img/forum-jales/foto271.jpg",
+            "img/forum-jales/foto272.jpg",
+            "img/forum-jales/foto273.jpg",
+            "img/forum-jales/foto274.jpg",
+            "img/forum-jales/foto275.jpg",
+            "img/forum-jales/foto276.jpg",
+            "img/forum-jales/foto277.jpg",
+            "img/forum-jales/foto278.jpg",
+            "img/forum-jales/foto279.jpg",
+            "img/forum-jales/foto280.jpg",
+            "img/forum-jales/foto281.jpg",
+            "img/forum-jales/foto282.jpg",
+            "img/forum-jales/foto283.jpg",
+            "img/forum-jales/foto284.jpg",
+            "img/forum-jales/foto285.jpg",
+            "img/forum-jales/foto286.jpg",
+            "img/forum-jales/foto287.jpg",
+            "img/forum-jales/foto288.jpg",
+            "img/forum-jales/foto289.jpg",
+            "img/forum-jales/foto290.jpg",
+            "img/forum-jales/foto291.jpg",
+            "img/forum-jales/foto292.jpg",
+            "img/forum-jales/foto293.jpg",
+            "img/forum-jales/foto294.jpg",
+            "img/forum-jales/foto295.jpg",
+            "img/forum-jales/foto296.jpg",
+            "img/forum-jales/foto297.jpg",
+            "img/forum-jales/foto298.jpg",
+            "img/forum-jales/foto299.jpg",
+            "img/forum-jales/foto300.jpg",
+            "img/forum-jales/foto301.jpg",
+            "img/forum-jales/foto302.jpg",
+            "img/forum-jales/foto303.jpg",
+            "img/forum-jales/foto304.jpg",
+            "img/forum-jales/foto305.jpg",
+            "img/forum-jales/foto306.jpg",
+            "img/forum-jales/foto307.jpg",
+            "img/forum-jales/foto308.jpg",
+            "img/forum-jales/foto309.jpg",
+            "img/forum-jales/foto310.jpg",
+            "img/forum-jales/foto312.jpg",
+            "img/forum-jales/foto314.jpg",
+            "img/forum-jales/foto316.jpg",
+            "img/forum-jales/foto318.jpg",
+            "img/forum-jales/foto319.jpg",
+            "img/forum-jales/foto320.jpg",
+            "img/forum-jales/foto321.jpg",
+            "img/forum-jales/foto322.jpg",
+            "img/forum-jales/foto323.jpg",
+            "img/forum-jales/foto324.jpg",
+            "img/forum-jales/foto325.jpg",
+            "img/forum-jales/foto326.jpg",
+            "img/forum-jales/foto327.jpg",
+            "img/forum-jales/foto328.jpg",
+            "img/forum-jales/foto329.jpg",
+            "img/forum-jales/foto330.jpg",
+            "img/forum-jales/foto331.jpg",
+            "img/forum-jales/foto332.jpg",
+            "img/forum-jales/foto333.jpg",
+            "img/forum-jales/foto334.jpg",
+            "img/forum-jales/foto335.jpg",
+            "img/forum-jales/foto336.jpg",
+            "img/forum-jales/foto337.jpg",
+            "img/forum-jales/foto338.jpg",
+            "img/forum-jales/foto339.jpg",
+            "img/forum-jales/foto340.jpg",
+            "img/forum-jales/foto341.jpg"
+        ];
+        
+        const totalImages = images.length;
         const projectId = 'forum-jales';
         let currentImageIndex = 0;
 
         const galleryGrid = document.getElementById('galleryGrid');
-        for (let i = 1; i <= totalImages; i++) {
+        images.forEach((imagePath, index) => {
             const item = document.createElement('div');
             item.className = 'gallery-item';
             item.innerHTML = `
-                <img src="img/${projectId}/foto${i}.jpg" alt="Foto ${i}" loading="lazy">
+                <img src="${imagePath}" alt="Foto ${index + 1}" loading="lazy" onerror="this.parentElement.style.display='none'">
             `;
-            item.onclick = () => openLightbox(i - 1);
+            item.onclick = () => openLightbox(index);
             galleryGrid.appendChild(item);
-        }
+        });
 
         function openLightbox(index) {
             currentImageIndex = index;
@@ -554,7 +892,7 @@
 
         function updateLightboxImage() {
             const img = document.getElementById('lightboxImage');
-            img.src = `img/${projectId}/foto${currentImageIndex + 1}.jpg`;
+            img.src = images[currentImageIndex];
             document.getElementById('currentIndex').textContent = currentImageIndex + 1;
         }
 

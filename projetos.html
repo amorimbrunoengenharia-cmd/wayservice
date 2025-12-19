@@ -19,7 +19,7 @@
         <div class="container nav-container">
             <a href="index.html" class="logo-link">
                 <div class="logo">
-                    <img src="logo/Ativo 2.png" alt="WayService" style="height: 50px;">
+                    <img src="logo/Ativo 2.png" alt="WayService" class="logo-height-50">
                 </div>
             </a>
             <div class="nav-menu" id="navMenu">
@@ -49,8 +49,14 @@
                     </svg>
                     <span>Orçamento</span>
                 </a>
+                <a href="canal-denuncia.html" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                    <span>Canal de Denúncias</span>
+                </a>
             </div>
-            <button class="menu-toggle" id="menuToggle">
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="4" x2="20" y1="12" y2="12"></line>
                     <line x1="4" x2="20" y1="6" y2="6"></line>
@@ -61,7 +67,7 @@
     </nav>
 
     <!-- Botão WhatsApp Flutuante -->
-    <a href="https://wa.me/5518997421905" target="_blank" class="whatsapp-float" aria-label="Falar no WhatsApp">
+    <a href="https://wa.me/5518997421905" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Falar no WhatsApp">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
         </svg>
@@ -72,8 +78,8 @@
         <div class="hero-background"></div>
         <div class="container">
             <div class="hero-content fade-in reveal">
-                <h1 style="margin-bottom: 0.5rem;"><span class="typing-effect">Galeria Técnica &</span> <span class="highlight">Obras Realizadas</span></h1>
-                <p class="hero-subtitle" style="margin-bottom: 1rem;">Portfólio de execuções em infraestrutura industrial, obras públicas e varejo • <span class="counter" data-target="14" style="color: var(--primary-green); font-weight: 600;">0</span> projetos executados</p>
+                <h1 class="margin-bottom-half"><span class="typing-effect">Galeria Técnica &</span> <span class="highlight">Obras Realizadas</span></h1>
+                <p class="hero-subtitle margin-bottom-1">Portfólio de execuções em infraestrutura industrial, obras públicas e varejo • <span class="counter counter-green" data-target="14">0</span> projetos executados</p>
             </div>
         </div>
     </section>
@@ -98,8 +104,8 @@
                     <button class="filter-btn" data-filter="varejo">Varejo</button>
                     <button class="filter-btn" data-filter="manutencao">Manutenção</button>
                 </div>
-                <div style="margin-top: 1rem;">
-                    <select id="projectSort" class="search-input" style="width: auto; min-width: 200px;">
+                <div class="margin-top-1">
+                    <select id="projectSort" class="search-input select-auto-width" aria-label="Ordenar projetos">
                         <option value="">Ordenar por...</option>
                         <option value="recent">Mais Recentes</option>
                         <option value="area">Maior Área (m²)</option>

@@ -13,6 +13,7 @@
             left: 0;
             right: 0;
             background: rgba(30, 31, 39, 0.95);
+            -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(67, 228, 86, 0.2);
             padding: 1rem 2rem;
@@ -207,6 +208,7 @@
         .lightbox-info {
             width: 400px;
             background: rgba(26, 26, 46, 0.95);
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             padding: 2rem;
             overflow-y: auto;
@@ -317,6 +319,7 @@
             border: 1px solid #333;
             border-radius: 16px;
             padding: 2rem;
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             display: flex;
             align-items: center;
@@ -428,9 +431,11 @@
         </a>
         <div class="header-badge">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <polyline points="16 11 18 13 22 9"></polyline>
             </svg>
-            <span>Responsável: Eng. José Sérgio</span>
+            <span>Gestão de Execução: Eng. José Sérgio</span>
         </div>
     </nav>
 
@@ -474,9 +479,9 @@
                 </svg>
             </div>
             <div class="engineer-info">
-                <div class="engineer-label">Responsável Técnico</div>
+                <div class="engineer-label">Gestão de Execução</div>
                 <div class="engineer-name">Eng. José Sérgio</div>
-                <div class="engineer-role">Engenheiro Responsável (Acervo Técnico)</div>
+                <div class="engineer-role">Engenheiro Responsável</div>
             </div>
         </div>
 
@@ -491,7 +496,7 @@
             <div class="lightbox-image-wrapper">
                 <img id="lightboxImage" class="lightbox-image" src="" alt="">
                 <div class="lightbox-counter">
-                    <span id="currentIndex">1</span> / <span id="totalImages">77</span>
+                    <span id="currentIndex">1</span> / <span id="totalImages">74</span>
                 </div>
             </div>
             <div class="lightbox-info">
@@ -519,21 +524,98 @@
         </div>
     </div>
 
-    <script>
-        const totalImages = 77;
+        <script>
+        const images = [
+            "img/forum-lins/foto1.jpg",
+            "img/forum-lins/foto2.jpg",
+            "img/forum-lins/foto3.jpg",
+            "img/forum-lins/foto4.jpg",
+            "img/forum-lins/foto5.jpg",
+            "img/forum-lins/foto6.jpg",
+            "img/forum-lins/foto7.jpg",
+            "img/forum-lins/foto8.jpg",
+            "img/forum-lins/foto9.jpg",
+            "img/forum-lins/foto10.jpg",
+            "img/forum-lins/foto11.jpg",
+            "img/forum-lins/foto12.jpg",
+            "img/forum-lins/foto13.jpg",
+            "img/forum-lins/foto14.jpg",
+            "img/forum-lins/foto15.jpg",
+            "img/forum-lins/foto16.jpg",
+            "img/forum-lins/foto17.jpg",
+            "img/forum-lins/foto18.jpg",
+            "img/forum-lins/foto19.jpg",
+            "img/forum-lins/foto20.jpg",
+            "img/forum-lins/foto21.jpg",
+            "img/forum-lins/foto22.jpg",
+            "img/forum-lins/foto23.jpg",
+            "img/forum-lins/foto24.jpg",
+            "img/forum-lins/foto25.jpg",
+            "img/forum-lins/foto26.jpg",
+            "img/forum-lins/foto27.jpg",
+            "img/forum-lins/foto28.jpg",
+            "img/forum-lins/foto29.jpg",
+            "img/forum-lins/foto30.jpg",
+            "img/forum-lins/foto31.jpg",
+            "img/forum-lins/foto32.jpg",
+            "img/forum-lins/foto33.jpg",
+            "img/forum-lins/foto34.jpg",
+            "img/forum-lins/foto35.jpg",
+            "img/forum-lins/foto36.jpg",
+            "img/forum-lins/foto37.jpg",
+            "img/forum-lins/foto38.jpg",
+            "img/forum-lins/foto39.jpg",
+            "img/forum-lins/foto40.jpg",
+            "img/forum-lins/foto41.jpg",
+            "img/forum-lins/foto42.jpg",
+            "img/forum-lins/foto46.jpg",
+            "img/forum-lins/foto47.jpg",
+            "img/forum-lins/foto48.jpg",
+            "img/forum-lins/foto49.jpg",
+            "img/forum-lins/foto50.jpg",
+            "img/forum-lins/foto51.jpg",
+            "img/forum-lins/foto52.jpg",
+            "img/forum-lins/foto53.jpg",
+            "img/forum-lins/foto54.jpg",
+            "img/forum-lins/foto55.jpg",
+            "img/forum-lins/foto56.jpg",
+            "img/forum-lins/foto57.jpg",
+            "img/forum-lins/foto58.jpg",
+            "img/forum-lins/foto59.jpg",
+            "img/forum-lins/foto60.jpg",
+            "img/forum-lins/foto61.jpg",
+            "img/forum-lins/foto62.jpg",
+            "img/forum-lins/foto63.jpg",
+            "img/forum-lins/foto64.jpg",
+            "img/forum-lins/foto65.jpg",
+            "img/forum-lins/foto66.jpg",
+            "img/forum-lins/foto67.jpg",
+            "img/forum-lins/foto68.jpg",
+            "img/forum-lins/foto69.jpg",
+            "img/forum-lins/foto70.jpg",
+            "img/forum-lins/foto71.jpg",
+            "img/forum-lins/foto72.jpg",
+            "img/forum-lins/foto73.jpg",
+            "img/forum-lins/foto74.jpg",
+            "img/forum-lins/foto75.jpg",
+            "img/forum-lins/foto76.jpg",
+            "img/forum-lins/foto77.jpg"
+        ];
+        
+        const totalImages = images.length;
         const projectId = 'forum-lins';
         let currentImageIndex = 0;
 
         const galleryGrid = document.getElementById('galleryGrid');
-        for (let i = 1; i <= totalImages; i++) {
+        images.forEach((imagePath, index) => {
             const item = document.createElement('div');
             item.className = 'gallery-item';
             item.innerHTML = `
-                <img src="img/${projectId}/foto${i}.jpg" alt="Foto ${i}" loading="lazy">
+                <img src="${imagePath}" alt="Foto ${index + 1}" loading="lazy" onerror="this.parentElement.style.display='none'">
             `;
-            item.onclick = () => openLightbox(i - 1);
+            item.onclick = () => openLightbox(index);
             galleryGrid.appendChild(item);
-        }
+        });
 
         function openLightbox(index) {
             currentImageIndex = index;
@@ -554,7 +636,7 @@
 
         function updateLightboxImage() {
             const img = document.getElementById('lightboxImage');
-            img.src = `img/${projectId}/foto${currentImageIndex + 1}.jpg`;
+            img.src = images[currentImageIndex];
             document.getElementById('currentIndex').textContent = currentImageIndex + 1;
         }
 

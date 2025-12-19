@@ -13,6 +13,7 @@
             left: 0;
             right: 0;
             background: rgba(30, 31, 39, 0.95);
+            -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(67, 228, 86, 0.2);
             padding: 1rem 2rem;
@@ -207,6 +208,7 @@
         .lightbox-info {
             width: 400px;
             background: rgba(26, 26, 46, 0.95);
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             padding: 2rem;
             overflow-y: auto;
@@ -317,6 +319,7 @@
             border: 1px solid #333;
             border-radius: 16px;
             padding: 2rem;
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             display: flex;
             align-items: center;
@@ -428,9 +431,11 @@
         </a>
         <div class="header-badge">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <polyline points="16 11 18 13 22 9"></polyline>
             </svg>
-            <span>Responsável: Eng. Bruno Amorim</span>
+            <span>Gestão de Execução: Eng. Bruno Amorim</span>
         </div>
     </nav>
 
@@ -474,9 +479,9 @@
                 </svg>
             </div>
             <div class="engineer-info">
-                <div class="engineer-label">Responsável Técnico</div>
+                <div class="engineer-label">Gestão de Execução</div>
                 <div class="engineer-name">Eng. Bruno Amorim</div>
-                <div class="engineer-role">Engenheiro Responsável (Acervo Técnico)</div>
+                <div class="engineer-role">Engenheiro Responsável</div>
             </div>
         </div>
 
@@ -519,21 +524,114 @@
         </div>
     </div>
 
-    <script>
-        const totalImages = 90;
+        <script>
+        const images = [
+            "img/ufv-santa-adelia/foto1.jpg",
+            "img/ufv-santa-adelia/foto2.jpg",
+            "img/ufv-santa-adelia/foto3.jpg",
+            "img/ufv-santa-adelia/foto4.jpg",
+            "img/ufv-santa-adelia/foto5.jpg",
+            "img/ufv-santa-adelia/foto6.jpg",
+            "img/ufv-santa-adelia/foto7.jpg",
+            "img/ufv-santa-adelia/foto8.jpg",
+            "img/ufv-santa-adelia/foto9.jpg",
+            "img/ufv-santa-adelia/foto10.jpg",
+            "img/ufv-santa-adelia/foto11.jpg",
+            "img/ufv-santa-adelia/foto12.jpg",
+            "img/ufv-santa-adelia/foto13.jpg",
+            "img/ufv-santa-adelia/foto14.jpg",
+            "img/ufv-santa-adelia/foto15.jpg",
+            "img/ufv-santa-adelia/foto16.jpg",
+            "img/ufv-santa-adelia/foto17.jpg",
+            "img/ufv-santa-adelia/foto18.jpg",
+            "img/ufv-santa-adelia/foto19.jpg",
+            "img/ufv-santa-adelia/foto20.jpg",
+            "img/ufv-santa-adelia/foto21.jpg",
+            "img/ufv-santa-adelia/foto22.jpg",
+            "img/ufv-santa-adelia/foto23.jpg",
+            "img/ufv-santa-adelia/foto24.jpg",
+            "img/ufv-santa-adelia/foto25.jpg",
+            "img/ufv-santa-adelia/foto26.jpg",
+            "img/ufv-santa-adelia/foto27.jpg",
+            "img/ufv-santa-adelia/foto28.jpg",
+            "img/ufv-santa-adelia/foto29.jpg",
+            "img/ufv-santa-adelia/foto30.jpg",
+            "img/ufv-santa-adelia/foto31.jpg",
+            "img/ufv-santa-adelia/foto32.jpg",
+            "img/ufv-santa-adelia/foto33.jpg",
+            "img/ufv-santa-adelia/foto34.jpg",
+            "img/ufv-santa-adelia/foto35.jpg",
+            "img/ufv-santa-adelia/foto36.jpg",
+            "img/ufv-santa-adelia/foto37.jpg",
+            "img/ufv-santa-adelia/foto38.jpg",
+            "img/ufv-santa-adelia/foto39.jpg",
+            "img/ufv-santa-adelia/foto40.jpg",
+            "img/ufv-santa-adelia/foto41.jpg",
+            "img/ufv-santa-adelia/foto42.jpg",
+            "img/ufv-santa-adelia/foto43.jpg",
+            "img/ufv-santa-adelia/foto44.jpg",
+            "img/ufv-santa-adelia/foto45.jpg",
+            "img/ufv-santa-adelia/foto46.jpg",
+            "img/ufv-santa-adelia/foto47.jpg",
+            "img/ufv-santa-adelia/foto48.jpg",
+            "img/ufv-santa-adelia/foto49.jpg",
+            "img/ufv-santa-adelia/foto50.jpg",
+            "img/ufv-santa-adelia/foto51.jpg",
+            "img/ufv-santa-adelia/foto52.jpg",
+            "img/ufv-santa-adelia/foto53.jpg",
+            "img/ufv-santa-adelia/foto54.jpg",
+            "img/ufv-santa-adelia/foto55.jpg",
+            "img/ufv-santa-adelia/foto56.jpg",
+            "img/ufv-santa-adelia/foto57.jpg",
+            "img/ufv-santa-adelia/foto58.jpg",
+            "img/ufv-santa-adelia/foto59.jpg",
+            "img/ufv-santa-adelia/foto60.jpg",
+            "img/ufv-santa-adelia/foto61.jpg",
+            "img/ufv-santa-adelia/foto62.jpg",
+            "img/ufv-santa-adelia/foto63.jpg",
+            "img/ufv-santa-adelia/foto64.jpg",
+            "img/ufv-santa-adelia/foto65.jpg",
+            "img/ufv-santa-adelia/foto66.jpg",
+            "img/ufv-santa-adelia/foto67.jpg",
+            "img/ufv-santa-adelia/foto68.jpg",
+            "img/ufv-santa-adelia/foto69.jpg",
+            "img/ufv-santa-adelia/foto70.jpg",
+            "img/ufv-santa-adelia/foto71.jpg",
+            "img/ufv-santa-adelia/foto72.jpg",
+            "img/ufv-santa-adelia/foto73.jpg",
+            "img/ufv-santa-adelia/foto74.jpg",
+            "img/ufv-santa-adelia/foto75.jpg",
+            "img/ufv-santa-adelia/foto76.jpg",
+            "img/ufv-santa-adelia/foto77.jpg",
+            "img/ufv-santa-adelia/foto78.jpg",
+            "img/ufv-santa-adelia/foto79.jpg",
+            "img/ufv-santa-adelia/foto80.jpg",
+            "img/ufv-santa-adelia/foto81.jpg",
+            "img/ufv-santa-adelia/foto82.jpg",
+            "img/ufv-santa-adelia/foto83.jpg",
+            "img/ufv-santa-adelia/foto84.jpg",
+            "img/ufv-santa-adelia/foto85.jpg",
+            "img/ufv-santa-adelia/foto86.jpg",
+            "img/ufv-santa-adelia/foto87.jpg",
+            "img/ufv-santa-adelia/foto88.jpg",
+            "img/ufv-santa-adelia/foto89.jpg",
+            "img/ufv-santa-adelia/foto90.jpg"
+        ];
+        
+        const totalImages = images.length;
         const projectId = 'ufv-santa-adelia';
         let currentImageIndex = 0;
 
         const galleryGrid = document.getElementById('galleryGrid');
-        for (let i = 1; i <= totalImages; i++) {
+        images.forEach((imagePath, index) => {
             const item = document.createElement('div');
             item.className = 'gallery-item';
             item.innerHTML = `
-                <img src="img/${projectId}/foto${i}.jpg" alt="Foto ${i}" loading="lazy">
+                <img src="${imagePath}" alt="Foto ${index + 1}" loading="lazy" onerror="this.parentElement.style.display='none'">
             `;
-            item.onclick = () => openLightbox(i - 1);
+            item.onclick = () => openLightbox(index);
             galleryGrid.appendChild(item);
-        }
+        });
 
         function openLightbox(index) {
             currentImageIndex = index;
@@ -554,7 +652,7 @@
 
         function updateLightboxImage() {
             const img = document.getElementById('lightboxImage');
-            img.src = `img/${projectId}/foto${currentImageIndex + 1}.jpg`;
+            img.src = images[currentImageIndex];
             document.getElementById('currentIndex').textContent = currentImageIndex + 1;
         }
 

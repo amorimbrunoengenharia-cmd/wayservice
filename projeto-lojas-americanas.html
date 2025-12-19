@@ -13,6 +13,7 @@
             left: 0;
             right: 0;
             background: rgba(30, 31, 39, 0.95);
+            -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(67, 228, 86, 0.2);
             padding: 1rem 2rem;
@@ -207,6 +208,7 @@
         .lightbox-info {
             width: 400px;
             background: rgba(26, 26, 46, 0.95);
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             padding: 2rem;
             overflow-y: auto;
@@ -317,6 +319,7 @@
             border: 1px solid #333;
             border-radius: 16px;
             padding: 2rem;
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             display: flex;
             align-items: center;
@@ -428,9 +431,11 @@
         </a>
         <div class="header-badge">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <polyline points="16 11 18 13 22 9"></polyline>
             </svg>
-            <span>Responsável: Eng. Bruno</span>
+            <span>Gestão de Execução: Eng. Bruno Amorim</span>
         </div>
     </nav>
 
@@ -474,9 +479,9 @@
                 </svg>
             </div>
             <div class="engineer-info">
-                <div class="engineer-label">Responsável Técnico</div>
-                <div class="engineer-name">Eng. Bruno</div>
-                <div class="engineer-role">Engenheiro Responsável (Acervo Técnico)</div>
+                <div class="engineer-label">Gestão de Execução</div>
+                <div class="engineer-name">Eng. Bruno Amorim</div>
+                <div class="engineer-role">Engenheiro Responsável</div>
             </div>
         </div>
 
@@ -491,7 +496,7 @@
             <div class="lightbox-image-wrapper">
                 <img id="lightboxImage" class="lightbox-image" src="" alt="">
                 <div class="lightbox-counter">
-                    <span id="currentIndex">1</span> / <span id="totalImages">178</span>
+                    <span id="currentIndex">1</span> / <span id="totalImages">176</span>
                 </div>
             </div>
             <div class="lightbox-info">
@@ -519,21 +524,200 @@
         </div>
     </div>
 
-    <script>
-        const totalImages = 178;
+        <script>
+        const images = [
+            "img/lojas-americanas/foto1.jpg",
+            "img/lojas-americanas/foto2.jpg",
+            "img/lojas-americanas/foto3.jpg",
+            "img/lojas-americanas/foto4.jpg",
+            "img/lojas-americanas/foto5.jpg",
+            "img/lojas-americanas/foto6.jpg",
+            "img/lojas-americanas/foto7.jpg",
+            "img/lojas-americanas/foto8.jpg",
+            "img/lojas-americanas/foto9.jpg",
+            "img/lojas-americanas/foto10.jpg",
+            "img/lojas-americanas/foto11.jpg",
+            "img/lojas-americanas/foto12.jpg",
+            "img/lojas-americanas/foto13.jpg",
+            "img/lojas-americanas/foto14.jpg",
+            "img/lojas-americanas/foto15.jpg",
+            "img/lojas-americanas/foto16.jpg",
+            "img/lojas-americanas/foto17.jpg",
+            "img/lojas-americanas/foto18.jpg",
+            "img/lojas-americanas/foto19.jpg",
+            "img/lojas-americanas/foto20.jpg",
+            "img/lojas-americanas/foto21.jpg",
+            "img/lojas-americanas/foto22.jpg",
+            "img/lojas-americanas/foto23.jpg",
+            "img/lojas-americanas/foto24.jpg",
+            "img/lojas-americanas/foto25.jpg",
+            "img/lojas-americanas/foto26.jpg",
+            "img/lojas-americanas/foto27.jpg",
+            "img/lojas-americanas/foto28.jpg",
+            "img/lojas-americanas/foto29.jpg",
+            "img/lojas-americanas/foto30.jpg",
+            "img/lojas-americanas/foto31.jpg",
+            "img/lojas-americanas/foto32.jpg",
+            "img/lojas-americanas/foto33.jpg",
+            "img/lojas-americanas/foto34.jpg",
+            "img/lojas-americanas/foto35.jpg",
+            "img/lojas-americanas/foto36.jpg",
+            "img/lojas-americanas/foto37.jpg",
+            "img/lojas-americanas/foto38.jpg",
+            "img/lojas-americanas/foto39.jpg",
+            "img/lojas-americanas/foto40.jpg",
+            "img/lojas-americanas/foto41.jpg",
+            "img/lojas-americanas/foto42.jpg",
+            "img/lojas-americanas/foto43.jpg",
+            "img/lojas-americanas/foto44.jpg",
+            "img/lojas-americanas/foto45.jpg",
+            "img/lojas-americanas/foto46.jpg",
+            "img/lojas-americanas/foto47.jpg",
+            "img/lojas-americanas/foto48.jpg",
+            "img/lojas-americanas/foto49.jpg",
+            "img/lojas-americanas/foto50.jpg",
+            "img/lojas-americanas/foto51.jpg",
+            "img/lojas-americanas/foto52.jpg",
+            "img/lojas-americanas/foto53.jpg",
+            "img/lojas-americanas/foto54.jpg",
+            "img/lojas-americanas/foto55.jpg",
+            "img/lojas-americanas/foto56.jpg",
+            "img/lojas-americanas/foto57.jpg",
+            "img/lojas-americanas/foto58.jpg",
+            "img/lojas-americanas/foto59.jpg",
+            "img/lojas-americanas/foto60.jpg",
+            "img/lojas-americanas/foto61.jpg",
+            "img/lojas-americanas/foto62.jpg",
+            "img/lojas-americanas/foto63.jpg",
+            "img/lojas-americanas/foto64.jpg",
+            "img/lojas-americanas/foto65.jpg",
+            "img/lojas-americanas/foto66.jpg",
+            "img/lojas-americanas/foto67.jpg",
+            "img/lojas-americanas/foto68.jpg",
+            "img/lojas-americanas/foto69.jpg",
+            "img/lojas-americanas/foto70.jpg",
+            "img/lojas-americanas/foto71.jpg",
+            "img/lojas-americanas/foto72.jpg",
+            "img/lojas-americanas/foto73.jpg",
+            "img/lojas-americanas/foto74.jpg",
+            "img/lojas-americanas/foto75.jpg",
+            "img/lojas-americanas/foto76.jpg",
+            "img/lojas-americanas/foto77.jpg",
+            "img/lojas-americanas/foto78.jpg",
+            "img/lojas-americanas/foto79.jpg",
+            "img/lojas-americanas/foto80.jpg",
+            "img/lojas-americanas/foto81.jpg",
+            "img/lojas-americanas/foto82.jpg",
+            "img/lojas-americanas/foto83.jpg",
+            "img/lojas-americanas/foto84.jpg",
+            "img/lojas-americanas/foto85.jpg",
+            "img/lojas-americanas/foto86.jpg",
+            "img/lojas-americanas/foto87.jpg",
+            "img/lojas-americanas/foto88.jpg",
+            "img/lojas-americanas/foto89.jpg",
+            "img/lojas-americanas/foto90.jpg",
+            "img/lojas-americanas/foto91.jpg",
+            "img/lojas-americanas/foto92.jpg",
+            "img/lojas-americanas/foto93.jpg",
+            "img/lojas-americanas/foto94.jpg",
+            "img/lojas-americanas/foto95.jpg",
+            "img/lojas-americanas/foto96.jpg",
+            "img/lojas-americanas/foto97.jpg",
+            "img/lojas-americanas/foto98.jpg",
+            "img/lojas-americanas/foto99.jpg",
+            "img/lojas-americanas/foto100.jpg",
+            "img/lojas-americanas/foto101.jpg",
+            "img/lojas-americanas/foto102.jpg",
+            "img/lojas-americanas/foto103.jpg",
+            "img/lojas-americanas/foto104.jpg",
+            "img/lojas-americanas/foto105.jpg",
+            "img/lojas-americanas/foto106.jpg",
+            "img/lojas-americanas/foto107.jpg",
+            "img/lojas-americanas/foto108.jpg",
+            "img/lojas-americanas/foto109.jpg",
+            "img/lojas-americanas/foto110.jpg",
+            "img/lojas-americanas/foto111.jpg",
+            "img/lojas-americanas/foto112.jpg",
+            "img/lojas-americanas/foto113.jpg",
+            "img/lojas-americanas/foto114.jpg",
+            "img/lojas-americanas/foto115.jpg",
+            "img/lojas-americanas/foto116.jpg",
+            "img/lojas-americanas/foto117.jpg",
+            "img/lojas-americanas/foto118.jpg",
+            "img/lojas-americanas/foto119.jpg",
+            "img/lojas-americanas/foto120.jpg",
+            "img/lojas-americanas/foto121.jpg",
+            "img/lojas-americanas/foto122.jpg",
+            "img/lojas-americanas/foto123.jpg",
+            "img/lojas-americanas/foto124.jpg",
+            "img/lojas-americanas/foto125.jpg",
+            "img/lojas-americanas/foto126.jpg",
+            "img/lojas-americanas/foto127.jpg",
+            "img/lojas-americanas/foto128.jpg",
+            "img/lojas-americanas/foto129.jpg",
+            "img/lojas-americanas/foto130.jpg",
+            "img/lojas-americanas/foto131.jpg",
+            "img/lojas-americanas/foto132.jpg",
+            "img/lojas-americanas/foto135.jpg",
+            "img/lojas-americanas/foto136.jpg",
+            "img/lojas-americanas/foto137.jpg",
+            "img/lojas-americanas/foto138.jpg",
+            "img/lojas-americanas/foto139.jpg",
+            "img/lojas-americanas/foto140.jpg",
+            "img/lojas-americanas/foto141.jpg",
+            "img/lojas-americanas/foto142.jpg",
+            "img/lojas-americanas/foto143.jpg",
+            "img/lojas-americanas/foto144.jpg",
+            "img/lojas-americanas/foto145.jpg",
+            "img/lojas-americanas/foto146.jpg",
+            "img/lojas-americanas/foto147.jpg",
+            "img/lojas-americanas/foto148.jpg",
+            "img/lojas-americanas/foto149.jpg",
+            "img/lojas-americanas/foto150.jpg",
+            "img/lojas-americanas/foto151.jpg",
+            "img/lojas-americanas/foto152.jpg",
+            "img/lojas-americanas/foto153.jpg",
+            "img/lojas-americanas/foto154.jpg",
+            "img/lojas-americanas/foto155.jpg",
+            "img/lojas-americanas/foto156.jpg",
+            "img/lojas-americanas/foto157.jpg",
+            "img/lojas-americanas/foto158.jpg",
+            "img/lojas-americanas/foto159.jpg",
+            "img/lojas-americanas/foto160.jpg",
+            "img/lojas-americanas/foto161.jpg",
+            "img/lojas-americanas/foto162.jpg",
+            "img/lojas-americanas/foto163.jpg",
+            "img/lojas-americanas/foto164.jpg",
+            "img/lojas-americanas/foto165.jpg",
+            "img/lojas-americanas/foto166.jpg",
+            "img/lojas-americanas/foto167.jpg",
+            "img/lojas-americanas/foto168.jpg",
+            "img/lojas-americanas/foto169.jpg",
+            "img/lojas-americanas/foto170.jpg",
+            "img/lojas-americanas/foto171.jpg",
+            "img/lojas-americanas/foto172.jpg",
+            "img/lojas-americanas/foto173.jpg",
+            "img/lojas-americanas/foto174.jpg",
+            "img/lojas-americanas/foto175.jpg",
+            "img/lojas-americanas/foto176.jpg",
+            "img/lojas-americanas/foto177.jpg",
+            "img/lojas-americanas/foto178.jpg"
+        ];
+        
+        const totalImages = images.length;
         const projectId = 'lojas-americanas';
         let currentImageIndex = 0;
 
         const galleryGrid = document.getElementById('galleryGrid');
-        for (let i = 1; i <= totalImages; i++) {
+        images.forEach((imagePath, index) => {
             const item = document.createElement('div');
             item.className = 'gallery-item';
             item.innerHTML = `
-                <img src="img/${projectId}/foto${i}.jpg" alt="Foto ${i}" loading="lazy">
+                <img src="${imagePath}" alt="Foto ${index + 1}" loading="lazy" onerror="this.parentElement.style.display='none'">
             `;
-            item.onclick = () => openLightbox(i - 1);
+            item.onclick = () => openLightbox(index);
             galleryGrid.appendChild(item);
-        }
+        });
 
         function openLightbox(index) {
             currentImageIndex = index;
@@ -554,7 +738,7 @@
 
         function updateLightboxImage() {
             const img = document.getElementById('lightboxImage');
-            img.src = `img/${projectId}/foto${currentImageIndex + 1}.jpg`;
+            img.src = images[currentImageIndex];
             document.getElementById('currentIndex').textContent = currentImageIndex + 1;
         }
 

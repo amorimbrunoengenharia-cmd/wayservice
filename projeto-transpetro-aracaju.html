@@ -486,7 +486,7 @@
             <div class="lightbox-image-wrapper">
                 <img id="lightboxImage" class="lightbox-image" src="" alt="">
                 <div class="lightbox-counter">
-                    <span id="currentIndex">1</span> / <span id="totalImages">96</span>
+                    <span id="currentIndex">1</span> / <span id="totalImages">95</span>
                 </div>
             </div>
             <div class="lightbox-info">
@@ -514,21 +514,119 @@
         </div>
     </div>
 
-    <script>
-        const totalImages = 96;
+        <script>
+        const images = [
+            "img/transpetro-aracaju/foto1.jpg",
+            "img/transpetro-aracaju/foto2.jpg",
+            "img/transpetro-aracaju/foto3.jpg",
+            "img/transpetro-aracaju/foto4.jpg",
+            "img/transpetro-aracaju/foto5.jpg",
+            "img/transpetro-aracaju/foto7.jpg",
+            "img/transpetro-aracaju/foto8.jpg",
+            "img/transpetro-aracaju/foto9.jpg",
+            "img/transpetro-aracaju/foto10.jpg",
+            "img/transpetro-aracaju/foto11.jpg",
+            "img/transpetro-aracaju/foto12.jpg",
+            "img/transpetro-aracaju/foto13.jpg",
+            "img/transpetro-aracaju/foto14.jpg",
+            "img/transpetro-aracaju/foto15.jpg",
+            "img/transpetro-aracaju/foto16.jpg",
+            "img/transpetro-aracaju/foto17.jpg",
+            "img/transpetro-aracaju/foto18.jpg",
+            "img/transpetro-aracaju/foto19.jpg",
+            "img/transpetro-aracaju/foto20.jpg",
+            "img/transpetro-aracaju/foto21.jpg",
+            "img/transpetro-aracaju/foto22.jpg",
+            "img/transpetro-aracaju/foto23.jpg",
+            "img/transpetro-aracaju/foto24.jpg",
+            "img/transpetro-aracaju/foto25.jpg",
+            "img/transpetro-aracaju/foto26.jpg",
+            "img/transpetro-aracaju/foto27.jpg",
+            "img/transpetro-aracaju/foto28.jpg",
+            "img/transpetro-aracaju/foto29.jpg",
+            "img/transpetro-aracaju/foto30.jpg",
+            "img/transpetro-aracaju/foto31.jpg",
+            "img/transpetro-aracaju/foto32.jpg",
+            "img/transpetro-aracaju/foto33.jpg",
+            "img/transpetro-aracaju/foto34.jpg",
+            "img/transpetro-aracaju/foto35.jpg",
+            "img/transpetro-aracaju/foto36.jpg",
+            "img/transpetro-aracaju/foto37.jpg",
+            "img/transpetro-aracaju/foto38.jpg",
+            "img/transpetro-aracaju/foto39.jpg",
+            "img/transpetro-aracaju/foto40.jpg",
+            "img/transpetro-aracaju/foto41.jpg",
+            "img/transpetro-aracaju/foto42.jpg",
+            "img/transpetro-aracaju/foto43.jpg",
+            "img/transpetro-aracaju/foto44.jpg",
+            "img/transpetro-aracaju/foto45.jpg",
+            "img/transpetro-aracaju/foto46.jpg",
+            "img/transpetro-aracaju/foto47.jpg",
+            "img/transpetro-aracaju/foto48.jpg",
+            "img/transpetro-aracaju/foto49.jpg",
+            "img/transpetro-aracaju/foto50.jpg",
+            "img/transpetro-aracaju/foto51.jpg",
+            "img/transpetro-aracaju/foto52.jpg",
+            "img/transpetro-aracaju/foto53.jpg",
+            "img/transpetro-aracaju/foto54.jpg",
+            "img/transpetro-aracaju/foto55.jpg",
+            "img/transpetro-aracaju/foto56.jpg",
+            "img/transpetro-aracaju/foto57.jpg",
+            "img/transpetro-aracaju/foto58.jpg",
+            "img/transpetro-aracaju/foto59.jpg",
+            "img/transpetro-aracaju/foto60.jpg",
+            "img/transpetro-aracaju/foto61.jpg",
+            "img/transpetro-aracaju/foto62.jpg",
+            "img/transpetro-aracaju/foto63.jpg",
+            "img/transpetro-aracaju/foto64.jpg",
+            "img/transpetro-aracaju/foto65.jpg",
+            "img/transpetro-aracaju/foto66.jpg",
+            "img/transpetro-aracaju/foto67.jpg",
+            "img/transpetro-aracaju/foto68.jpg",
+            "img/transpetro-aracaju/foto69.jpg",
+            "img/transpetro-aracaju/foto70.jpg",
+            "img/transpetro-aracaju/foto71.jpg",
+            "img/transpetro-aracaju/foto72.jpg",
+            "img/transpetro-aracaju/foto73.jpg",
+            "img/transpetro-aracaju/foto74.jpg",
+            "img/transpetro-aracaju/foto75.jpg",
+            "img/transpetro-aracaju/foto76.jpg",
+            "img/transpetro-aracaju/foto77.jpg",
+            "img/transpetro-aracaju/foto78.jpg",
+            "img/transpetro-aracaju/foto79.jpg",
+            "img/transpetro-aracaju/foto80.jpg",
+            "img/transpetro-aracaju/foto81.jpg",
+            "img/transpetro-aracaju/foto82.jpg",
+            "img/transpetro-aracaju/foto83.jpg",
+            "img/transpetro-aracaju/foto84.jpg",
+            "img/transpetro-aracaju/foto85.jpg",
+            "img/transpetro-aracaju/foto86.jpg",
+            "img/transpetro-aracaju/foto87.jpg",
+            "img/transpetro-aracaju/foto88.jpg",
+            "img/transpetro-aracaju/foto89.jpg",
+            "img/transpetro-aracaju/foto90.jpg",
+            "img/transpetro-aracaju/foto91.jpg",
+            "img/transpetro-aracaju/foto92.jpg",
+            "img/transpetro-aracaju/foto93.jpg",
+            "img/transpetro-aracaju/foto94.jpg",
+            "img/transpetro-aracaju/foto95.jpg",
+            "img/transpetro-aracaju/foto96.jpg"
+        ];
+        
+        const totalImages = images.length;
         const projectId = 'transpetro-aracaju';
         let currentImageIndex = 0;
 
         const galleryGrid = document.getElementById('galleryGrid');
-        for (let i = 1; i <= totalImages; i++) {
+        images.forEach((imagePath, index) => {
             const item = document.createElement('div');
             item.className = 'gallery-item';
             item.innerHTML = `
-                <img src="img/${projectId}/foto${i}.jpg" alt="Foto ${i}" loading="lazy">
+                <img src="${imagePath}" alt="Foto ${index + 1}" loading="lazy" onerror="this.parentElement.style.display='none'">
             `;
-            item.onclick = () => openLightbox(i - 1);
+            item.onclick = () => openLightbox(index);
             galleryGrid.appendChild(item);
-        }
+        });
 
         function openLightbox(index) {
             currentImageIndex = index;
@@ -549,7 +647,7 @@
 
         function updateLightboxImage() {
             const img = document.getElementById('lightboxImage');
-            img.src = `img/${projectId}/foto${currentImageIndex + 1}.jpg`;
+            img.src = images[currentImageIndex];
             document.getElementById('currentIndex').textContent = currentImageIndex + 1;
         }
 
