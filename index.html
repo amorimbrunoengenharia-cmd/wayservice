@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>WayService - Engenharia e Construção em SP, MS e PR</title>
-    <meta name="description" content="WayService: Obras Turnkey, Reformas Comerciais, Manutenção Industrial e Obras Públicas. Construtora especializada em soluções completas para indústrias e varejo.">
-    <meta name="keywords" content="Construtora, Engenharia Civil, Obras Rápidas, Reformas Corporativas, Manutenção Predial, Obras Turnkey, Construção Industrial, Reformas Comerciais, Manutenção Industrial, Obras Públicas, Construtora SP, Construtora MS, Construtora PR, Engenharia Londrina">
+    <title>WayService - Engenharia Civil para Obras Públicas e Licitações | SP</title>
+    <meta name="description" content="WayService Engenharia: Especializada em Obras Públicas, Licitações, Usinas Fotovoltaicas e Reformas Corporativas. Atuação em Araçatuba, Londrina e região. Compliance NR, ABNT e PBQP-H.">
+    <meta name="keywords" content="Obras Públicas, Licitações, Engenharia Civil Araçatuba, Reformas Fóruns, Usinas Fotovoltaicas, Engenharia Londrina, Obras Corporativas, Sistema TRRF, Construtora Obras Públicas SP, PBQP-H, NR-10, NR-18, Compliance Obras Públicas">
     <meta name="author" content="WayService Engenharia">
     <meta name="robots" content="index, follow">
     <meta name="language" content="pt-BR">
@@ -705,11 +705,15 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 Way Service Engenharia. Todos os direitos reservados.</p>
+                <p>© <span id="currentYear"></span> Way Service Engenharia. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Atualiza o ano automaticamente
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
