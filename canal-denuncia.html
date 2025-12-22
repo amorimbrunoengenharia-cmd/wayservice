@@ -289,6 +289,68 @@
             box-shadow: 0 10px 30px rgba(67, 228, 86, 0.3);
         }
         
+        /* Estilos para campo de arquivo */
+        .file-upload-wrapper {
+            position: relative;
+            width: 100%;
+        }
+        
+        .file-upload-input {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 2px dashed rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .file-upload-input::-webkit-file-upload-button {
+            background: rgba(67, 228, 86, 0.2);
+            color: #43E456;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .file-upload-input::-webkit-file-upload-button:hover {
+            background: rgba(67, 228, 86, 0.3);
+        }
+        
+        .file-upload-input:hover {
+            border-color: rgba(67, 228, 86, 0.4);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .file-upload-input:focus {
+            outline: none;
+            border-color: #43E456;
+            box-shadow: 0 0 0 3px rgba(67, 228, 86, 0.15);
+        }
+        
+        .file-info {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+            padding: 0.75rem;
+            background: rgba(67, 228, 86, 0.1);
+            border-radius: 8px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.875rem;
+        }
+        
+        .file-info svg {
+            flex-shrink: 0;
+            stroke: #43E456;
+        }
+        
         .success-message {
             display: none;
             background: rgba(67, 228, 86, 0.1);
@@ -541,7 +603,28 @@
                         
                         <div class="form-group">
                             <label for="evidencias">Evidências Disponíveis</label>
-                            <textarea id="evidencias" name="Evidencias_Disponiveis" placeholder="Descreva se existem documentos, fotos, vídeos, e-mails ou outras evidências. Não é necessário anexar agora."></textarea>
+                            <textarea id="evidencias" name="Evidencias_Disponiveis" placeholder="Descreva se existem documentos, fotos, vídeos, e-mails ou outras evidências."></textarea>
+                            <small>Descreva as evidências que possui. Você pode anexar arquivos no campo abaixo.</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="attachment">
+                                📄 Anexar Documentos/Evidências
+                            </label>
+                            <div class="file-upload-wrapper">
+                                <input 
+                                    type="file" 
+                                    id="attachment" 
+                                    name="attachment" 
+                                    class="file-upload-input"
+                                    accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.txt,.zip,.rar"
+                                    multiple
+                                >
+                            </div>
+                            <small>
+                                <strong>Tipos aceitos:</strong> PDF, Word, Imagens (JPG/PNG), Texto, ZIP/RAR<br>
+                                <strong>Tamanho máximo:</strong> 10MB por arquivo | <strong>Máximo:</strong> 5 arquivos
+                            </small>
                         </div>
                     </div>
 
@@ -639,6 +722,64 @@
 
         // Gerar protocolo ao carregar a página
         document.getElementById('protocolo').value = gerarProtocolo();
+
+        // Validação de arquivos anexados
+        const fileInput = document.getElementById('attachment');
+        const maxFileSize = 10 * 1024 * 1024; // 10MB em bytes
+        const maxFiles = 5;
+
+        fileInput.addEventListener('change', function(e) {
+            const files = Array.from(e.target.files);
+            
+            // Verificar número máximo de arquivos
+            if (files.length > maxFiles) {
+                alert(`⚠️ Você pode anexar no máximo ${maxFiles} arquivos por vez.`);
+                e.target.value = '';
+                return;
+            }
+
+            // Verificar tamanho de cada arquivo
+            let invalidFiles = [];
+            files.forEach(file => {
+                if (file.size > maxFileSize) {
+                    invalidFiles.push(file.name);
+                }
+            });
+
+            if (invalidFiles.length > 0) {
+                alert(`⚠️ Os seguintes arquivos excedem o tamanho máximo de 10MB:\n\n${invalidFiles.join('\n')}\n\nPor favor, remova-os e tente novamente.`);
+                e.target.value = '';
+                return;
+            }
+
+            // Mostrar feedback visual dos arquivos selecionados
+            if (files.length > 0) {
+                let existingInfo = fileInput.parentElement.querySelector('.file-info');
+                if (existingInfo) {
+                    existingInfo.remove();
+                }
+
+                const fileInfo = document.createElement('div');
+                fileInfo.className = 'file-info';
+                fileInfo.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                    </svg>
+                    <span>${files.length} arquivo(s) selecionado(s) - Total: ${formatBytes(files.reduce((sum, f) => sum + f.size, 0))}</span>
+                `;
+                fileInput.parentElement.appendChild(fileInfo);
+            }
+        });
+
+        // Função auxiliar para formatar bytes
+        function formatBytes(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return Math.round(bytes / Math.pow(k, i) * 100) / 100 + ' ' + sizes[i];
+        }
 
         // Verificar se veio da página de sucesso
         const urlParams = new URLSearchParams(window.location.search);
