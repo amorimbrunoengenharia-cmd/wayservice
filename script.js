@@ -89,6 +89,22 @@ if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
+        // Pegar botão de submit
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.innerHTML;
+        
+        // Desabilitar botão e mostrar loading
+        submitButton.disabled = true;
+        submitButton.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="spin">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 6v6l4 2"></path>
+            </svg>
+            Enviando...
+        `;
+        submitButton.style.opacity = '0.7';
+        submitButton.style.cursor = 'not-allowed';
+        
         // Coletar dados do formulário
         const formData = new FormData(contactForm);
         const nome = formData.get('nome');
@@ -117,6 +133,14 @@ ${mensagem}
         
         // Abrir WhatsApp em nova aba
         window.open(whatsappURL, '_blank');
+        
+        // Restaurar botão após pequeno delay
+        setTimeout(() => {
+            submitButton.disabled = false;
+            submitButton.innerHTML = originalButtonText;
+            submitButton.style.opacity = '1';
+            submitButton.style.cursor = 'pointer';
+        }, 2000);
         
         // Limpar formulário
         contactForm.reset();
