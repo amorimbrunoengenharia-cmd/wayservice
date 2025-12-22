@@ -94,8 +94,6 @@ def main():
     
     # Lista de pastas de projetos
     pastas = [
-        "escola-barra-bonita",
-        "escola-itapolis",
         "forum-andradina",
         "forum-aracatuba",
         "forum-auriflama",

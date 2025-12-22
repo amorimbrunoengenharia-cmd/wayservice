@@ -118,6 +118,7 @@
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             box-sizing: border-box;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(67, 228, 86, 0.1);
         }
         
         @media (max-width: 768px) {
@@ -206,8 +207,8 @@
         .form-group textarea {
             width: 100%;
             padding: 1rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             border-radius: 12px;
             color: #fff;
             font-family: 'Inter', sans-serif;
@@ -220,7 +221,8 @@
         .form-group textarea:focus {
             outline: none;
             border-color: #43E456;
-            box-shadow: 0 0 0 3px rgba(67, 228, 86, 0.1);
+            box-shadow: 0 0 0 3px rgba(67, 228, 86, 0.15);
+            background: rgba(255, 255, 255, 0.1);
         }
         
         .form-group textarea {
@@ -389,6 +391,9 @@
                     </svg>
                 </div>
                 <h1><span class="highlight">Canal de Denúncias</span></h1>
+                <p class="hero-subtitle" style="font-size: 1.15rem; font-weight: 500; color: #43E456; margin-bottom: 1.5rem; line-height: 1.6;">
+                    Este é um canal de comunicação público e seguro para o recebimento de reclamações e denúncias sobre violações de Direitos Humanos de qualquer natureza, incluindo casos de discriminação, assédio moral ou sexual, fraudes e desvios de conduta.
+                </p>
                 <p class="hero-subtitle">Espaço seguro e confidencial para relatos de fraudes, corrupção e violação de dados pessoais</p>
                 <div class="status-indicator justify-center margin-top-1-half">
                     <span class="status-dot"></span>
@@ -498,11 +503,13 @@
                             <label for="tipo">Tipo de Denúncia *</label>
                             <select id="tipo" name="Tipo_de_Denuncia" required>
                                 <option value="">Selecione o tipo</option>
+                                <option value="direitos-humanos">Violação de Direitos Humanos</option>
+                                <option value="assedio-moral">Assédio Moral</option>
+                                <option value="assedio-sexual">Assédio Sexual</option>
+                                <option value="discriminacao">Discriminação (Racial, Gênero, etc.)</option>
                                 <option value="fraude">Fraude ou Corrupção</option>
                                 <option value="lgpd">Violação de Dados Pessoais (LGPD)</option>
                                 <option value="conflito">Conflito de Interesses</option>
-                                <option value="assedio">Assédio Moral ou Sexual</option>
-                                <option value="discriminacao">Discriminação</option>
                                 <option value="conduta">Má Conduta Profissional</option>
                                 <option value="seguranca">Violação de Segurança do Trabalho</option>
                                 <option value="licitacao">Irregularidades em Licitações</option>
@@ -614,7 +621,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2024 Way Service Engenharia. Todos os direitos reservados.</p>
+                <p>© 2026 Way Service Engenharia. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>

@@ -9,7 +9,7 @@
     "descricao": "Execução de Sistema de TRRF (Tempo de Resistência ao Fogo) em fábrica de sementes de milho da Monsanto/Bayer em Itai/SP. Projeto focado em adequação as normas de segurança do Corpo de Bombeiros, garantindo proteção da área produtiva através de aplicação de materiais resistentes ao fogo, instalação de sistemas de compartimentação e adequação estrutural para prevenção e controle de incêndios industriais. Foram executados 3.600 m² de revestimento com parede dupla de placa RF, totalizando 7.200 m² de área aplicada.",
     "localizacao": "Itai/SP",
     "área": "Proteção Contra Incêndio",
-    "ano": "2024",
+    "ano": "2022",
     "badge": "Concluído",
     "galeria": [
       "img/monsanto-bayer-itai/foto1.jpg",
@@ -43,7 +43,7 @@
     "descricao": "Execução turn-key como EPCista de Usina Fotovoltaica de 6.178 MWp em São Mateus/ES para EDP Renováveis. Projeto de grande porte abrangendo terraplanagem, construção de sala de Operação e Manutenção (O&M), sistema de drenagem pluvial, cercamento perimetral com concertina, instalações elétricas de Baixa e Media Tensão, sistema de CFTV para monitoramento 24h, obtenção de AVCB e comissionamento com ligamento na rede da concessionária local.",
     "localizacao": "São Mateus/ES",
     "área": "6.178 MWp",
-    "ano": "2024",
+    "ano": "2023",
     "badge": "Concluído",
     "galeria": [
       "img/ufv-sao-mateus/foto1.jpg",
@@ -78,7 +78,7 @@
     "descricao": "Execução turn-key como EPCista de Usina Fotovoltaica de 4.787 MWp em Pedro Canario/ES para EDP Renováveis. Projeto completo abrangendo terraplanagem, construção de sala de Operação e Manutenção (O&M), sistema de drenagem pluvial, cercamento perimetral com concertina, instalações elétricas de Baixa e Media Tensão, sistema de CFTV para monitoramento 24h, obtenção de AVCB e comissionamento com ligamento na rede da concessionária local.",
     "localizacao": "Pedro Canario/ES",
     "área": "4.787 MWp",
-    "ano": "2024",
+    "ano": "2023",
     "badge": "Concluído",
     "galeria": [
       "img/ufv-pedro-canario/foto1.jpg",
@@ -133,7 +133,7 @@
     "descricao": "Execução completa como EPCista de Usina Fotovoltaica de 4.5 MWp em Santa Adélia/SP. Escopo incluiu terraplanagem, construção de sala de O&M, sistema de drenagem, cercamento perimetral, instalações elétricas BT e MT, sistema de CFTV, AVCB e ligamento da usina na rede da concessionária. Projeto turn-key com gestão integrada de todas as disciplinas.",
     "localizacao": "Santa Adélia/SP",
     "área": "4.5 MWp",
-    "ano": "2024",
+    "ano": "2025",
     "badge": "Concluído",
     "galeria": [
       "img/ufv-santa-adelia/foto1.jpg",
@@ -529,9 +529,9 @@
     "responsavel_tecnico": "Eng. Bruno",
     "imagemCapa": "img/lojas-americanas/capa.jpg",
     "descricao": "Projeto Turnkey com adequação completa de layout, instalações elétricas, pisos e acabamentos. Entrega realizada dentro do prazo crítico com zero paradas operacionais.",
-    "localizacao": "São Paulo/SP",
+    "localizacao": "João Pessoa/PB",
     "área": "1.500 m²",
-    "ano": "2024",
+    "ano": "2022",
     "badge": "Concluído",
     "galeria": [
       "img/lojas-americanas/foto1.jpg",
@@ -944,45 +944,15 @@
     ]
   },
   {
-    "id": "escola-itapolis",
-    "titulo": "Reforma Escola Dr. Antonio de Moraes Barros",
-    "categoria": "obras_publicas",
-    "tipo_autoria": "acervo_pessoal",
-    "responsavel_tecnico": "Eng. José Sérgio",
-    "imagemCapa": "img/escola-itapolis/capa.jpg",
-    "descricao": "Reforma completa de escola pública estadual com adequação de infraestrutura, pisos, pintura e acessibilidade. Obra executada seguindo normas técnicas para ambientes educacionais.",
-    "localizacao": "Itápolis/SP",
-    "área": "Edificação Escolar",
-    "ano": "2025",
-    "badge": "Concluído",
-    "galeria": [
-      "img/escola-itapolis/foto1.jpg",
-      "img/escola-itapolis/foto2.jpg",
-      "img/escola-itapolis/foto3.jpg",
-      "img/escola-itapolis/foto4.jpg",
-      "img/escola-itapolis/foto5.jpg",
-      "img/escola-itapolis/foto6.jpg",
-      "img/escola-itapolis/foto7.jpg",
-      "img/escola-itapolis/foto8.jpg",
-      "img/escola-itapolis/foto9.jpg",
-      "img/escola-itapolis/foto10.jpg",
-      "img/escola-itapolis/foto11.jpg",
-      "img/escola-itapolis/foto12.jpg",
-      "img/escola-itapolis/foto13.jpg",
-      "img/escola-itapolis/foto14.jpg",
-      "img/escola-itapolis/foto15.jpg"
-    ]
-  },
-  {
     "id": "forum-andradina",
     "titulo": "Fórum de Andradina - Reforma Geral",
     "categoria": "obras_publicas",
     "tipo_autoria": "acervo_pessoal",
     "responsavel_tecnico": "Eng. José Sérgio",
     "imagemCapa": "img/forum-andradina/capa.jpg",
-    "descricao": "Reforma completa do Fórum de Andradina incluindo execução de piso de concreto, sistema de águas pluviais, cobertura e beiral. Obras realizadas com mínima interferência nas atividades forenses.",
+    "descricao": "Revitalização completa de áreas externas com 1.330m² de concreto polido e drenagem, reforma integral de sanitários e infraestrutura elétrica para climatização de 3 edifícios. Obra de grande porte englobando: Pavimentação de 1.333m² em concreto polido usinado e 156m² de mosaico português. Reforma completa de 5 sanitários com substituição total de hidráulica, elétrica e revestimentos. Manutenção de coberturas e impermeabilização de lajes no Anexo de Violência Doméstica. Execução de infraestrutura elétrica para ar-condicionado (1.185m de cabeamento) atendendo 3 prédios do complexo.",
     "localizacao": "Andradina/SP",
-    "área": "Edificação Pública",
+    "área": "1.550 m²",
     "ano": "2025",
     "badge": "Concluído",
     "galeria": [
@@ -1466,29 +1436,6 @@
     ]
   },
   {
-    "id": "escola-barra-bonita",
-    "titulo": "Reforma Escola EE Laurindo Battaiola",
-    "categoria": "obras_publicas",
-    "tipo_autoria": "acervo_pessoal",
-    "responsavel_tecnico": "Eng. José Sérgio",
-    "imagemCapa": "img/escola-barra-bonita/capa.jpg",
-    "descricao": "Reforma completa de escola pública estadual com adequação de infraestrutura, pisos, pintura e melhorias gerais. Obra executada seguindo normas técnicas para ambientes educacionais.",
-    "localizacao": "Barra Bonita/SP",
-    "área": "Edificação Escolar",
-    "ano": "2025",
-    "badge": "Concluído",
-    "galeria": [
-      "img/escola-barra-bonita/foto1.jpg",
-      "img/escola-barra-bonita/foto2.jpg",
-      "img/escola-barra-bonita/foto3.jpg",
-      "img/escola-barra-bonita/foto4.jpg",
-      "img/escola-barra-bonita/foto5.jpg",
-      "img/escola-barra-bonita/foto6.jpg",
-      "img/escola-barra-bonita/foto7.jpg",
-      "img/escola-barra-bonita/foto8.jpg"
-    ]
-  },
-  {
     "id": "forum-aracatuba",
     "titulo": "Fórum de Araçatuba - Reforma Geral",
     "categoria": "obras_publicas",
@@ -1842,9 +1789,9 @@
     "tipo_autoria": "acervo_pessoal",
     "responsavel_tecnico": "Eng. José Sérgio",
     "imagemCapa": "img/forum-jales/capa.jpg",
-    "descricao": "Reforma completa do Fórum de Jales contemplando modernização de sanitários, impermeabilização de reservatório, execução de piso de concreto com supressao de árvores e automação de portões. Projeto executado com mínima interferência nas atividades forenses, garantindo funcionalidade e segurança durante toda a obra.",
+    "descricao": "Recuperação estrutural e impermeabilização de reservatório elevado, execução de piso de concreto em estacionamento (250m²) e automatização de fechamento perimetral. Intervenção técnica focada em patologias e infraestrutura: Recuperação estrutural de reservatório elevado com tratamento de armaduras e impermeabilização com manta líquida e resina termoplástica. Execução de 252m² de piso de concreto polido no estacionamento com supressão vegetal. Reforma completa do sanitário da escolta policial. Instalação de gradis e automatização de portões com nova infraestrutura elétrica.",
     "localizacao": "Jales/SP",
-    "área": "Edificação Pública",
+    "área": "450 m²",
     "ano": "2025",
     "badge": "Concluído",
     "galeria": [

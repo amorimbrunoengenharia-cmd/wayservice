@@ -116,19 +116,4 @@
         <priority>0.8</priority>
     </url>
 
-    <!-- Projetos Públicos - Escolas -->
-    <url>
-        <loc>https://wayserviceltda.com/projeto-escola-itapolis.html</loc>
-        <lastmod>2025-12-18</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://wayserviceltda.com/projeto-escola-barra-bonita.html</loc>
-        <lastmod>2025-12-18</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
 </urlset>
