@@ -198,51 +198,6 @@ img {
     stroke: white;
 }
 
-/* Botão de Ligação Flutuante (Mobile Only) */
-.phone-float {
-    position: fixed;
-    bottom: 6rem;
-    right: 1.5rem;
-    width: 56px;
-    height: 56px;
-    background: linear-gradient(135deg, #43E456 0%, #3BC64A 100%);
-    border-radius: 50%;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 8px 32px rgba(67, 228, 86, 0.4);
-    z-index: 9997;
-    transition: all 0.3s ease;
-    touch-action: manipulation;
-}
-
-.phone-float:hover {
-    transform: scale(1.1);
-    box-shadow: 0 12px 40px rgba(67, 228, 86, 0.6);
-}
-
-.phone-float svg {
-    width: 24px;
-    height: 24px;
-    stroke: white;
-}
-
-@media (max-width: 768px) {
-    .phone-float {
-        display: flex;
-    }
-}
-
-/* Performance: Lazy Loading Images */
-img[loading="lazy"] {
-    opacity: 0;
-    transition: opacity 0.3s ease-in;
-}
-
-img[loading="lazy"].loaded {
-    opacity: 1;
-}
-
 @keyframes pulse {
     0%, 100% {
         box-shadow: 0 8px 32px rgba(37, 211, 102, 0.4);
