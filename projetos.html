@@ -33,7 +33,7 @@
         <div class="container nav-container">
             <a href="index.html" class="logo-link">
                 <div class="logo">
-                    <img src="logo/Ativo 2.png" alt="WayService Engenharia - Galeria de Projetos" class="logo-height-50" loading="eager" width="68" height="50">
+                    <img src="logo/Ativo 2.png" alt="WayService Engenharia - Galeria de Projetos" loading="eager" width="68" height="50" style="width: 68px; height: 50px;">
                 </div>
             </a>
             <div class="nav-menu" id="navMenu">
@@ -81,9 +81,16 @@
     </nav>
 
     <!-- Botão WhatsApp Flutuante -->
-    <a href="https://wa.me/5518997421905" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Falar no WhatsApp">
+    <a href="https://wa.me/5518997421905?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank" rel="noopener" class="whatsapp-float" aria-label="Falar no WhatsApp">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+        </svg>
+    </a>
+
+    <!-- Botão de Ligação Móvel (Mobile Only) -->
+    <a href="tel:+5518997421905" class="phone-float" aria-label="Ligar agora">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
         </svg>
     </a>
 
@@ -185,7 +192,7 @@
             <div class="footer-content">
                 <div class="footer-col">
                     <div class="footer-logo">
-                        <img src="logo/Ativo 3@4x.png" alt="WS" class="logo-height-40" width="161" height="40" loading="lazy">
+                        <img src="logo/Ativo 3@4x.png" alt="WS" loading="lazy" width="161" height="40" style="width: 161px; height: 40px;">
                     </div>
                     <p>Engenharia de Continuidade Operacional para empresas que não podem parar.</p>
                 </div>
@@ -213,7 +220,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 Way Service Engenharia. Todos os direitos reservados.</p>
+                <p>© <span id="currentYear"></span> Way Service Engenharia. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
