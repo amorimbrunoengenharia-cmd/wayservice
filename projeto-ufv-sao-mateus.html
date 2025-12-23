@@ -631,7 +631,7 @@
             const item = document.createElement('div');
             item.className = 'gallery-item';
             item.innerHTML = `
-                <img src="${imagePath}" alt="Foto ${index + 1}" loading="lazy" onerror="this.parentElement.style.display='none'">
+                <img src="${imagePath}" alt="Foto ${index + 1}" onerror="this.parentElement.style.display='none'">
             `;
             item.onclick = () => openLightbox(index);
             galleryGrid.appendChild(item);
