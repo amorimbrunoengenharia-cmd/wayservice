@@ -54,6 +54,7 @@
     <meta name="geo.placename" content="Londrina, São Paulo, Mato Grosso do Sul">
     
     <!-- Favicon -->
+    <link rel="manifest" href="manifest.json">
     <link rel="icon" type="image/png" href="logo/Ativo 2.png">
     <link rel="apple-touch-icon" sizes="180x180" href="logo/Ativo 2.png">
     <link rel="icon" type="image/png" sizes="32x32" href="logo/Ativo 2.png">
@@ -809,6 +810,15 @@
 
     <script src="script.min.js" defer></script>
     <script>
+        // Registrar Service Worker para PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(reg => console.log('Service Worker registrado:', reg.scope))
+                    .catch(err => console.log('Erro no Service Worker:', err));
+            });
+        }
+
         // Atualiza o ano automaticamente
         document.getElementById('currentYear').textContent = new Date().getFullYear();
         

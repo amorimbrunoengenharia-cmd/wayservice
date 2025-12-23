@@ -1,5 +1,5 @@
 # Robots.txt para WayService Engenharia
-# Última atualização: 18/12/2025
+# Última atualização: 23/12/2025
 
 User-agent: *
 Allow: /
@@ -14,9 +14,15 @@ Crawl-delay: 1
 Disallow: /img/
 Disallow: /*.py$
 Disallow: /*.txt$
-Disallow: /logo/
+
+# Permitir logos importantes
+Allow: /logo/Ativo%202.png
+Allow: /logo/Ativo%203@4x.png
 
 # Permitir crawling de CSS e JS (importante para renderização do Google)
-Allow: /styles.css
+Allow: /styles.min.css
+Allow: /script.min.js
+Allow: /manifest.json
+Allow: /service-worker.js
 Allow: /script.js
 Allow: /projetos.js

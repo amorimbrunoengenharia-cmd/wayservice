@@ -7,7 +7,7 @@
     <!-- Página Principal -->
     <url>
         <loc>https://wayserviceltda.com/</loc>
-        <lastmod>2025-12-22</lastmod>
+        <lastmod>2025-12-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -15,7 +15,7 @@
     <!-- Página de Projetos -->
     <url>
         <loc>https://wayserviceltda.com/projetos.html</loc>
-        <lastmod>2025-12-22</lastmod>
+        <lastmod>2025-12-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -23,7 +23,7 @@
     <!-- Canal de Denúncias -->
     <url>
         <loc>https://wayserviceltda.com/canal-denuncia.html</loc>
-        <lastmod>2025-12-22</lastmod>
+        <lastmod>2025-12-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>

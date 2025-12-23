@@ -1,0 +1,36 @@
+{
+  "name": "WayService Engenharia",
+  "short_name": "WayService",
+  "description": "Engenharia de Continuidade Operacional para empresas que não podem parar",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1E1F27",
+  "theme_color": "#43E456",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "logo/Ativo 2.png",
+      "sizes": "83x61",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo/Ativo 3@4x.png",
+      "sizes": "981x244",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["business", "productivity", "engineering"],
+  "screenshots": [
+    {
+      "src": "img/share-image.webp",
+      "sizes": "1200x630",
+      "type": "image/webp",
+      "form_factor": "wide"
+    }
+  ],
+  "scope": "/",
+  "lang": "pt-BR",
+  "dir": "ltr"
+}
