@@ -30,6 +30,35 @@ Procure e **DELETE** qualquer registro do tipo:
 - ✅ Registros **TXT** (verificação)
 - ✅ Registros **SPF**, **DKIM** (segurança email)
 
+### ⚠️ ATENÇÃO CRÍTICA: PRESERVAR REGISTROS MX DO GOOGLE WORKSPACE
+
+**🚨 SE VOCÊ USA GOOGLE WORKSPACE PARA E-MAILS:**
+
+Os registros MX são ESSENCIAIS para o funcionamento do e-mail. **NUNCA delete** os seguintes registros:
+
+```
+Tipo: MX | Prioridade: 1  | Valor: ASPMX.L.GOOGLE.COM
+Tipo: MX | Prioridade: 5  | Valor: ALT1.ASPMX.L.GOOGLE.COM
+Tipo: MX | Prioridade: 5  | Valor: ALT2.ASPMX.L.GOOGLE.COM
+Tipo: MX | Prioridade: 10 | Valor: ALT3.ASPMX.L.GOOGLE.COM
+Tipo: MX | Prioridade: 10 | Valor: ALT4.ASPMX.L.GOOGLE.COM
+```
+
+**Mantenha também:**
+- Registros SPF: `v=spf1 include:_spf.google.com ~all`
+- Registros DKIM (google._domainkey)
+- Registros DMARC
+
+**❌ O QUE ACONTECE SE DELETAR:**
+- Seus e-mails @wayserviceltda.com PARAM de funcionar
+- Você não receberá novos e-mails
+- Você não conseguirá enviar e-mails
+
+**✅ O QUE DEVE FAZER:**
+- Apenas ADICIONE os registros A e CNAME do GitHub Pages
+- MANTENHA todos os registros MX e de e-mail existentes
+- Os dois sistemas (site + e-mail) funcionarão SIMULTANEAMENTE
+
 ---
 
 ## ➕ PASSO 2: ADICIONAR REGISTROS DO GITHUB PAGES

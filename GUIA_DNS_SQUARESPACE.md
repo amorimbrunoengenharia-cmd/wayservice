@@ -10,6 +10,39 @@
 
 ---
 
+## 🚨 ATENÇÃO CRÍTICA: PRESERVAR REGISTROS MX DO GOOGLE WORKSPACE
+
+**⚠️ ANTES DE FAZER QUALQUER ALTERAÇÃO DE DNS:**
+
+Se você usa **Google Workspace** (Gmail empresarial) com seu domínio, é ESSENCIAL manter os registros MX:
+
+### Registros MX que DEVEM ser mantidos:
+
+```
+Tipo: MX | Prioridade: 1  | Valor: ASPMX.L.GOOGLE.COM
+Tipo: MX | Prioridade: 5  | Valor: ALT1.ASPMX.L.GOOGLE.COM
+Tipo: MX | Prioridade: 5  | Valor: ALT2.ASPMX.L.GOOGLE.COM
+Tipo: MX | Prioridade: 10 | Valor: ALT3.ASPMX.L.GOOGLE.COM
+Tipo: MX | Prioridade: 10 | Valor: ALT4.ASPMX.L.GOOGLE.COM
+```
+
+**Mantenha também:**
+- Registros SPF: `v=spf1 include:_spf.google.com ~all`
+- Registros DKIM (google._domainkey)
+- Registros de verificação TXT do Google
+
+### ❌ O QUE ACONTECE SE DELETAR:
+- Seus e-mails @wayserviceltda.com PARAM de funcionar imediatamente
+- Você perderá recebimento e envio de e-mails
+- Recuperação pode levar 48-72 horas
+
+### ✅ SOLUÇÃO:
+Ao adicionar registros A ou CNAME para o site, **apenas ADICIONE** os novos registros. **NUNCA delete** os registros MX existentes. Ambos os sistemas funcionarão simultaneamente:
+- Registros A/CNAME → Site no GitHub Pages
+- Registros MX → E-mail no Google Workspace
+
+---
+
 ## ⚠️ IMPORTANTE - MÉTODO CORRETO PARA SQUARESPACE
 
 ### 🔴 ATENÇÃO: Squarespace tem limitações!
