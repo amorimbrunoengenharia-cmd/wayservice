@@ -3469,3 +3469,27 @@ button:disabled {
     cursor: not-allowed !important;
     pointer-events: none;
 }
+
+/* Logo Dimensions - Fixed sizes for brand consistency */
+.logo img {
+    width: 68px !important;
+    height: 50px !important;
+    object-fit: contain;
+    max-width: 68px;
+}
+
+.footer-logo img {
+    width: 161px !important;
+    height: 40px !important;
+    display: block !important;
+    object-fit: contain;
+}
+
+/* Hero Subtitle Enhancement - Canal de Denúncia */
+.hero-subtitle.enhanced {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #43E456;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
