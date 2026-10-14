@@ -1,5 +1,5 @@
 // Service Worker para PWA - WayService Engenharia
-const CACHE_NAME = 'wayservice-v1';
+const CACHE_NAME = 'wayservice-v8';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -9,6 +9,11 @@ const urlsToCache = [
   '/canal-denuncia.html',
   '/styles.min.css',
   '/script.min.js',
+  '/script.js',
+  '/projetos.js',
+  '/projetos.json',
+  '/theme.css?v=8',
+  '/theme.js',
   '/logo/Ativo 2.png',
   '/logo/Ativo 3@4x.png'
 ];
@@ -19,7 +24,7 @@ self.addEventListener('install', (event) => {
     caches.open(CACHE_NAME)
       .then((cache) => {
         console.log('Cache aberto');
-        return cache.addAll(urlsToCache);
+        return cache.addAll(urlsToCache).then(() => self.skipWaiting());
       })
   );
 });
@@ -36,7 +41,7 @@ self.addEventListener('activate', (event) => {
           }
         })
       );
-    })
+    }).then(() => self.clients.claim())
   );
 });
 

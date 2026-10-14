@@ -276,70 +276,6 @@ serviceCards.forEach(card => {
     });
 });
 
-// Filtros de Projetos
-const filterButtons = document.querySelectorAll('.filter-btn');
-const projectCards = document.querySelectorAll('.project-card');
-const projectSearch = document.getElementById('projectSearch');
-const projectsGrid = document.querySelector('.projects-grid');
-
-if (filterButtons.length > 0) {
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Remover active de todos
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            // Adicionar active ao clicado
-            button.classList.add('active');
-            
-            const filter = button.getAttribute('data-filter');
-            filterProjects(filter);
-        });
-    });
-}
-
-if (projectSearch) {
-    projectSearch.addEventListener('input', (e) => {
-        const searchTerm = e.target.value.toLowerCase();
-        const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
-        filterProjects(activeFilter, searchTerm);
-    });
-}
-
-function filterProjects(category, searchTerm = '') {
-    let visibleCount = 0;
-    
-    projectCards.forEach(card => {
-        const cardCategory = card.getAttribute('data-category');
-        const cardTitle = card.querySelector('h3').textContent.toLowerCase();
-        const cardDescription = card.querySelector('.project-description').textContent.toLowerCase();
-        
-        const matchesCategory = category === 'all' || cardCategory === category;
-        const matchesSearch = searchTerm === '' || 
-                             cardTitle.includes(searchTerm) || 
-                             cardDescription.includes(searchTerm);
-        
-        if (matchesCategory && matchesSearch) {
-            card.style.display = 'flex';
-            visibleCount++;
-        } else {
-            card.style.display = 'none';
-        }
-    });
-    
-    updateProjectCount(visibleCount);
-}
-
-function updateProjectCount(count) {
-    let countElement = document.querySelector('.project-count');
-    if (!countElement && projectsGrid) {
-        countElement = document.createElement('div');
-        countElement.className = 'project-count';
-        projectsGrid.parentElement.insertBefore(countElement, projectsGrid);
-    }
-    if (countElement) {
-        countElement.textContent = `${count} projeto${count !== 1 ? 's' : ''} encontrado${count !== 1 ? 's' : ''}`;
-    }
-}
-
 // Formulário de Orçamento
 const quoteForm = document.getElementById('quoteForm');
 
@@ -357,6 +293,8 @@ if (quoteForm) {
         const workType = formData.get('workType') || 'Não especificado';
         const deadline = formData.get('deadline') || 'Não especificado';
         const location = formData.get('location') || 'Não especificado';
+        const area = formData.get('area') || 'Não informado';
+        const attachments = Array.from(quoteForm.querySelector('input[type="file"]')?.files || []);
         
         // Mostrar loading
         const submitBtn = quoteForm.querySelector('button[type="submit"]');
@@ -375,6 +313,9 @@ if (quoteForm) {
 *Tipo de Obra:* ${workType}
 *Prazo Desejado:* ${deadline}
 *Localização:* ${location}
+*Área Estimada:* ${area}
+*Anexos selecionados:* ${attachments.length ? attachments.map(file => file.name).join(', ') : 'Nenhum'}
+${attachments.length ? 'Anexe os arquivos manualmente na conversa do WhatsApp.' : ''}
 
 *Descrição da Necessidade:*
 ${message}
@@ -384,20 +325,12 @@ ${message}
         const whatsappNumber = '5518997421905';
         const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
         
-        // Simular delay de envio
-        setTimeout(() => {
-            window.open(whatsappURL, '_blank');
-            
-            // Resetar botão
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-            
-            // Mostrar notificação de sucesso
-            showNotification('Redirecionando para WhatsApp...', 'success');
-            
-            // Limpar formulário
-            quoteForm.reset();
-        }, 1000);
+        window.open(whatsappURL, '_blank');
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        showNotification('Redirecionando para WhatsApp...', 'success');
+        quoteForm.reset();
+        quoteForm.querySelector('.file-preview')?.replaceChildren();
     });
 }
 
@@ -735,6 +668,12 @@ function initWizardForm() {
         });
 
         currentStep = stepIndex;
+        prevBtns.forEach(btn => btn.classList.toggle('btn-display-none', stepIndex === 0));
+        nextBtns.forEach(btn => btn.classList.toggle('btn-display-none', stepIndex === steps.length - 1));
+        const submitButton = wizardContainer.querySelector('button[type="submit"]');
+        if (submitButton) {
+            submitButton.classList.toggle('btn-display-none', stepIndex !== steps.length - 1);
+        }
         updateProgress();
     }
 
@@ -1207,7 +1146,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initFileUpload();
     initUrgencyTimer();
     initCounterAnimation();
-    initProjectFilters();
     initFAQAccordion();
     initFAQSearch();
     initTimeline();

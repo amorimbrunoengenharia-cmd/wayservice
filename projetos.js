@@ -86,8 +86,8 @@ async function loadProjects() {
         allProjects = await response.json();
         console.log('✅ Projetos carregados:', allProjects.length);
         console.log('📋 Projetos:', allProjects);
-        renderProjects(allProjects);
-        updateProjectCount(allProjects.length);
+        updateHeroProjectCount(allProjects.length);
+        applyProjectControls();
     } catch (error) {
         console.error('❌ Erro ao carregar projetos:', error);
         showError();
@@ -215,13 +215,13 @@ function generateDetailsHTML(project) {
         `);
     }
 
-    if (project.area) {
+    if (project['área']) {
         details.push(`
             <div class="detail-item">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <rect width="18" height="18" x="3" y="3" rx="2"></rect>
                 </svg>
-                ${project.area}
+                ${project['área']}
             </div>
         `);
     }
@@ -363,7 +363,7 @@ function prevImage() {
 /**
  * Atualiza o contador de projetos no hero
  */
-function updateProjectCount(count) {
+function updateHeroProjectCount(count) {
     const counter = document.querySelector('.counter');
     if (counter) {
         // Anima o contador
@@ -407,30 +407,61 @@ function showError() {
 }
 
 /**
- * Filtra projetos por categoria
+ * Applies the selected category, search term, and sort order together.
  */
-function filterProjects(category) {
-    if (category === 'all' || category === 'todos') {
-        renderProjects(allProjects);
-        updateProjectCount(allProjects.length);
-    } else {
-        const filtered = allProjects.filter(p => p.categoria === category);
-        renderProjects(filtered);
-        updateProjectCount(filtered.length);
+function applyProjectControls() {
+    const category = document.querySelector('.filter-btn.active')?.dataset.filter || 'all';
+    const searchInput = document.getElementById('projectSearch');
+    const searchTerm = normalizeProjectText(searchInput?.value || '');
+    const sort = document.getElementById('projectSort')?.value || '';
+
+    const filteredProjects = allProjects.filter(project => {
+        const matchesCategory = category === 'all' || project.categoria === category;
+        const searchableText = normalizeProjectText([
+            project.titulo,
+            project.descricao,
+            project.localizacao,
+            project['área'],
+            project.categoria
+        ].join(' '));
+
+        return matchesCategory && searchableText.includes(searchTerm);
+    });
+
+    if (sort === 'recent') {
+        filteredProjects.sort((first, second) => Number(second.ano) - Number(first.ano));
+    } else if (sort === 'area') {
+        filteredProjects.sort((first, second) => projectAreaValue(second) - projectAreaValue(first));
+    } else if (sort === 'name') {
+        filteredProjects.sort((first, second) => first.titulo.localeCompare(second.titulo, 'pt-BR'));
     }
+
+    renderProjects(filteredProjects);
+    updateProjectResultsCount(filteredProjects.length);
 }
 
-/**
- * Busca projetos por texto
- */
-function searchProjects(query) {
-    const lowerQuery = query.toLowerCase();
-    const filtered = allProjects.filter(project => 
-        project.titulo.toLowerCase().includes(lowerQuery) ||
-        project.descricao.toLowerCase().includes(lowerQuery) ||
-        (project.localizacao && project.localizacao.toLowerCase().includes(lowerQuery))
-    );
-    renderProjects(filtered);
+function normalizeProjectText(value) {
+    return String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('pt-BR');
+}
+
+function projectAreaValue(project) {
+    const area = String(project['área'] || '');
+    const value = area.match(/[\d.,]+(?=\s*m(?:²|2))/i)?.[0];
+    return value ? Number(value.replace(/\./g, '').replace(',', '.')) : -1;
+}
+
+function updateProjectResultsCount(count) {
+    let countElement = document.querySelector('.project-count');
+    const grid = document.getElementById('projectsGrid');
+    if (!countElement && grid) {
+        countElement = document.createElement('p');
+        countElement.className = 'project-count';
+        grid.before(countElement);
+    }
+
+    if (countElement) {
+        countElement.textContent = `${count} projeto${count !== 1 ? 's' : ''} encontrado${count !== 1 ? 's' : ''}`;
+    }
 }
 
 /**
@@ -480,24 +511,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Event listeners para filtros (se existirem)
-    const filterButtons = document.querySelectorAll('[data-filter]');
+    const filterButtons = document.querySelectorAll('.filter-btn');
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            const category = button.getAttribute('data-filter');
-            filterProjects(category);
-
-            // Atualiza estado ativo
             filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
+            applyProjectControls();
         });
     });
 
-    // Event listener para busca (se existir)
-    const searchInput = document.querySelector('.search-input');
+    const searchInput = document.getElementById('projectSearch');
     if (searchInput) {
-        searchInput.addEventListener('input', (e) => {
-            searchProjects(e.target.value);
-        });
+        searchInput.addEventListener('input', applyProjectControls);
+    }
+
+    const sortSelect = document.getElementById('projectSort');
+    if (sortSelect) {
+        sortSelect.addEventListener('change', applyProjectControls);
     }
 });
